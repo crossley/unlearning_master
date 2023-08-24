@@ -1,0 +1,132 @@
+This is BibTeX, Version 0.99d (TeX Live 2015)
+Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
+The top-level auxiliary file: udt_combined.aux
+The style file: apacite.bst
+Reallocated glb_str_ptr (elt_size=4) to 20 items from 10.
+Reallocated global_strs (elt_size=20001) to 20 items from 10.
+Reallocated glb_str_end (elt_size=4) to 20 items from 10.
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Reallocated wiz_functions (elt_size=4) to 6000 items from 3000.
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Reallocated wiz_functions (elt_size=4) to 9000 items from 6000.
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Database file #1: bibs/cdl.bib
+Database file #2: bibs/cdl_2.bib
+Repeated entry---line 686 of file bibs/cdl_2.bib
+ : @article{apicella_responses_1997
+ :                                 ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 1180 of file bibs/cdl_2.bib
+ : @article{calabresi_acetylcholine-mediated_2000
+ :                                               ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 1657 of file bibs/cdl_2.bib
+ : @article{crossley_erasing_2013
+ :                               ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 1774 of file bibs/cdl_2.bib
+ : @article{joel_actorcritic_2002
+ :                               ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 2011 of file bibs/cdl_2.bib
+ : @article{yamada_tonically_2004
+ :                               ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 2024 of file bibs/cdl_2.bib
+ : @article{shimo_role_2001
+ :                         ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 2227 of file bibs/cdl_2.bib
+ : @article{higgins_outpatient_1995
+ :                                 ,
+I'm skipping whatever remains of this entry
+Database file #3: bibs/crossley.bib
+Repeated entry---line 1 of file bibs/crossley.bib
+ : @article{higgins_outpatient_1995
+ :                                 ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 15 of file bibs/crossley.bib
+ : @article{calabresi_acetylcholine-mediated_2000
+ :                                               ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 39 of file bibs/crossley.bib
+ : @article{shimo_role_2001
+ :                         ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 50 of file bibs/crossley.bib
+ : @article{yamada_tonically_2004
+ :                               ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 63 of file bibs/crossley.bib
+ : @article{apicella_responses_1997
+ :                                 ,
+I'm skipping whatever remains of this entry
+I was expecting a `,' or a `}'---line 2090 of file bibs/crossley.bib
+ : 
+ : @article{LopezPaniaguaSeger2011,
+(Error may have been on previous line)
+I'm skipping whatever remains of this entry
+You're missing a field part---line 3187 of file bibs/crossley.bib
+ : 
+ : }
+(Error may have been on previous line)
+I'm skipping whatever remains of this entry
+You're missing a field name---line 3224 of file bibs/crossley.bib
+ :  
+ :  % volume={},
+(Error may have been on previous line)
+I'm skipping whatever remains of this entry
+You're missing a field name---line 3469 of file bibs/crossley.bib
+ :  
+ :  % Number                   = {643},
+(Error may have been on previous line)
+I'm skipping whatever remains of this entry
+Repeated entry---line 3993 of file bibs/crossley.bib
+ : @article{crossley_erasing_2013
+ :                               ,
+I'm skipping whatever remains of this entry
+apacite.bst [2013/07/21 v6.03 APA bibliography style]
+Warning--`others' not consistent with 6th ed. of the APA Manual
+You've used 41 entries,
+            6951 wiz_defined-function locations,
+            1576 strings with 19739 characters,
+and the built_in function-call counts, 89805 in all, are:
+= -- 11033
+> -- 765
+< -- 4652
++ -- 5049
+- -- 84
+* -- 6111
+:= -- 16921
+add.period$ -- 166
+call.type$ -- 41
+change.case$ -- 699
+chr.to.int$ -- 0
+cite$ -- 82
+duplicate$ -- 2488
+empty$ -- 3214
+format.name$ -- 1333
+if$ -- 16553
+int.to.chr$ -- 0
+int.to.str$ -- 123
+missing$ -- 0
+newline$ -- 1099
+num.names$ -- 332
+pop$ -- 1134
+preamble$ -- 1
+purify$ -- 164
+quote$ -- 0
+skip$ -- 5455
+stack$ -- 0
+substring$ -- 5476
+swap$ -- 1437
+text.length$ -- 90
+text.prefix$ -- 0
+top$ -- 1
+type$ -- 3408
+warning$ -- 1
+while$ -- 454
+width$ -- 0
+write$ -- 1439
+(There were 17 error messages)

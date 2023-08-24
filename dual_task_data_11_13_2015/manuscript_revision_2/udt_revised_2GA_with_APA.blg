@@ -1,0 +1,127 @@
+This is BibTeX, Version 0.99d (TeX Live 2015)
+Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
+The top-level auxiliary file: udt_revised_2GA_with_APA.aux
+The style file: apacite.bst
+Reallocated glb_str_ptr (elt_size=4) to 20 items from 10.
+Reallocated global_strs (elt_size=20001) to 20 items from 10.
+Reallocated glb_str_end (elt_size=4) to 20 items from 10.
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Reallocated wiz_functions (elt_size=4) to 6000 items from 3000.
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Reallocated wiz_functions (elt_size=4) to 9000 items from 6000.
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Database file #1: bibs/cdl.bib
+Database file #2: bibs/cdl_2.bib
+Repeated entry---line 686 of file bibs/cdl_2.bib
+ : @article{apicella_responses_1997
+ :                                 ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 1180 of file bibs/cdl_2.bib
+ : @article{calabresi_acetylcholine-mediated_2000
+ :                                               ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 1657 of file bibs/cdl_2.bib
+ : @article{crossley_erasing_2013
+ :                               ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 2011 of file bibs/cdl_2.bib
+ : @article{yamada_tonically_2004
+ :                               ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 2024 of file bibs/cdl_2.bib
+ : @article{shimo_role_2001
+ :                         ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 2227 of file bibs/cdl_2.bib
+ : @article{higgins_outpatient_1995
+ :                                 ,
+I'm skipping whatever remains of this entry
+Database file #3: bibs/crossley.bib
+Repeated entry---line 12 of file bibs/crossley.bib
+ : @article{higgins_outpatient_1995
+ :                                 ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 26 of file bibs/crossley.bib
+ : @article{calabresi_acetylcholine-mediated_2000
+ :                                               ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 50 of file bibs/crossley.bib
+ : @article{shimo_role_2001
+ :                         ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 61 of file bibs/crossley.bib
+ : @article{yamada_tonically_2004
+ :                               ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 74 of file bibs/crossley.bib
+ : @article{apicella_responses_1997
+ :                                 ,
+I'm skipping whatever remains of this entry
+I was expecting a `,' or a `}'---line 2101 of file bibs/crossley.bib
+ : 
+ : @article{LopezPaniaguaSeger2011,
+(Error may have been on previous line)
+I'm skipping whatever remains of this entry
+You're missing a field part---line 3198 of file bibs/crossley.bib
+ : 
+ : }
+(Error may have been on previous line)
+I'm skipping whatever remains of this entry
+You're missing a field name---line 3235 of file bibs/crossley.bib
+ :  
+ :  % volume={},
+(Error may have been on previous line)
+I'm skipping whatever remains of this entry
+You're missing a field name---line 3480 of file bibs/crossley.bib
+ :  
+ :  % Number                   = {643},
+(Error may have been on previous line)
+I'm skipping whatever remains of this entry
+Repeated entry---line 4004 of file bibs/crossley.bib
+ : @article{crossley_erasing_2013
+ :                               ,
+I'm skipping whatever remains of this entry
+apacite.bst [2013/07/21 v6.03 APA bibliography style]
+You've used 22 entries,
+            6951 wiz_defined-function locations,
+            1441 strings with 15868 characters,
+and the built_in function-call counts, 48124 in all, are:
+= -- 5873
+> -- 408
+< -- 2519
++ -- 2685
+- -- 44
+* -- 3316
+:= -- 9139
+add.period$ -- 90
+call.type$ -- 22
+change.case$ -- 375
+chr.to.int$ -- 0
+cite$ -- 44
+duplicate$ -- 1301
+empty$ -- 1740
+format.name$ -- 715
+if$ -- 8847
+int.to.chr$ -- 0
+int.to.str$ -- 66
+missing$ -- 0
+newline$ -- 602
+num.names$ -- 178
+pop$ -- 615
+preamble$ -- 1
+purify$ -- 88
+quote$ -- 0
+skip$ -- 2899
+stack$ -- 0
+substring$ -- 2891
+swap$ -- 768
+text.length$ -- 45
+text.prefix$ -- 0
+top$ -- 1
+type$ -- 1824
+warning$ -- 0
+while$ -- 243
+width$ -- 0
+write$ -- 785
+(There were 16 error messages)

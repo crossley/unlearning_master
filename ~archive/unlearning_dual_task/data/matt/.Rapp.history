@@ -1,0 +1,1194 @@
+rm( list = ls() )#
+#
+# condition phase block subject accuracy#
+#
+data <- read.table("anova_ac", header = TRUE)#
+#
+condition <- factor(data$condition)#
+phase <- factor(data$phase)#
+block <- factor(data$block)#
+subject <- factor(data$subject)#
+accuracy <- data$accuracy#
+#
+data <- data.frame(condition, phase, block, subject, accuracy)#
+#
+fm <- lmer( accuracy ~ condition*block + (1|subject) )#
+anovaTAB(fm, data)#
+lsmeansTAB(fm, data)#
+lsmeans (fm, pairwise ~ condition)
+rm( list = ls() )#
+#
+# condition phase block subject accuracy#
+#
+data <- read.table("anova_ext", header = TRUE)#
+#
+condition <- factor(data$condition)#
+phase <- factor(data$phase)#
+block <- factor(data$block)#
+subject <- factor(data$subject)#
+accuracy <- data$accuracy#
+#
+data <- data.frame(condition, phase, block, subject, accuracy)#
+#
+fm <- lmer( accuracy ~ condition*block + (1|subject) )#
+anovaTAB(fm, data)#
+lsmeansTAB(fm, data)#
+lsmeans (fm, pairwise ~ condition)
+rm( list = ls() )#
+#
+# condition phase block subject accuracy#
+#
+data <- read.table("anova_reac", header = TRUE)#
+#
+condition <- factor(data$condition)#
+phase <- factor(data$phase)#
+block <- factor(data$block)#
+subject <- factor(data$subject)#
+accuracy <- data$accuracy#
+#
+data <- data.frame(condition, phase, block, subject, accuracy)#
+#
+fm <- lmer( accuracy ~ condition*block + (1|subject) )#
+anovaTAB(fm, data)#
+lsmeansTAB(fm, data)#
+lsmeans (fm, pairwise ~ condition)
+rm( list = ls() )#
+#
+# condition phase block subject accuracy#
+#
+data <- read.table("anova_1", header = TRUE)#
+#
+condition <- factor(data$condition)#
+phase <- factor(data$phase)#
+block <- factor(data$block)#
+subject <- factor(data$subject)#
+accuracy <- data$accuracy#
+#
+data <- data.frame(condition, phase, block, subject, accuracy)#
+#
+fm <- lmer( accuracy ~ phase + (1|subject) )#
+anovaTAB(fm, data)#
+lsmeansTAB(fm, data)#
+lsmeans (fm, pairwise ~ condition)
+data <- read.table("anova_1", header = TRUE)#
+#
+condition <- factor(data$condition)#
+phase <- factor(data$phase)#
+block <- factor(data$block)#
+subject <- factor(data$subject)#
+accuracy <- data$accuracy#
+#
+data <- data.frame(condition, phase, block, subject, accuracy)#
+#
+fm <- lmer( accuracy ~ phase + (1|subject) )#
+anovaTAB(fm, data)#
+lsmeansTAB(fm, data)#
+lsmeans (fm, pairwise ~ phase)
+rm( list = ls() )#
+#
+# condition phase block subject accuracy#
+#
+data <- read.table("anova_1", header = TRUE)#
+#
+condition <- factor(data$condition)#
+phase <- factor(data$phase)#
+block <- factor(data$block)#
+subject <- factor(data$subject)#
+accuracy <- data$accuracy#
+#
+data <- data.frame(condition, phase, block, subject, accuracy)#
+#
+fm <- lmer( accuracy ~ phase + (1|subject) )#
+anovaTAB(fm, data)#
+lsmeans (fm, pairwise ~ phase)
+rm( list = ls() )#
+#
+# condition phase block subject accuracy#
+#
+data <- read.table("anova_2", header = TRUE)#
+#
+condition <- factor(data$condition)#
+phase <- factor(data$phase)#
+block <- factor(data$block)#
+subject <- factor(data$subject)#
+accuracy <- data$accuracy#
+#
+data <- data.frame(condition, phase, block, subject, accuracy)#
+#
+fm <- lmer( accuracy ~ phase + (1|subject) )#
+anovaTAB(fm, data)#
+lsmeans (fm, pairwise ~ phase)
+rm( list = ls() )#
+#
+# condition phase block subject accuracy#
+#
+data <- read.table("anova_3", header = TRUE)#
+#
+condition <- factor(data$condition)#
+phase <- factor(data$phase)#
+block <- factor(data$block)#
+subject <- factor(data$subject)#
+accuracy <- data$accuracy#
+#
+data <- data.frame(condition, phase, block, subject, accuracy)#
+#
+fm <- lmer( accuracy ~ phase + (1|subject) )#
+anovaTAB(fm, data)#
+lsmeans (fm, pairwise ~ phase)
+rm( list = ls() )#
+#
+# condition phase block subject accuracy#
+#
+data <- read.table("anova_1", header = TRUE)#
+#
+condition <- factor(data$condition)#
+phase <- factor(data$phase)#
+block <- factor(data$block)#
+subject <- factor(data$subject)#
+accuracy <- data$accuracy#
+#
+data <- data.frame(condition, phase, block, subject, accuracy)#
+#
+fm <- lmer( accuracy ~ phase + (1|subject) )#
+anovaTAB(fm, data)#
+lsmeans (fm, pairwise ~ phase)
+rm( list = ls() )#
+#
+# condition phase block subject accuracy#
+#
+data <- read.table("anova_4", header = TRUE)#
+#
+condition <- factor(data$condition)#
+phase <- factor(data$phase)#
+block <- factor(data$block)#
+subject <- factor(data$subject)#
+accuracy <- data$accuracy#
+#
+data <- data.frame(condition, phase, block, subject, accuracy)#
+#
+fm <- lmer( accuracy ~ phase + (1|subject) )#
+anovaTAB(fm, data)#
+lsmeans (fm, pairwise ~ phase)
+rm( list = ls() )#
+#
+# condition phase block subject accuracy#
+#
+data <- read.table("anova_savings_all_blocks", header = TRUE)#
+#
+condition <- factor(data$condition)#
+phase <- factor(data$phase)#
+block <- factor(data$block)#
+subject <- factor(data$subject)#
+accuracy <- data$accuracy#
+#
+data <- data.frame(condition, phase, block, subject, accuracy)#
+#
+fm <- lmer( accuracy ~ phase + (1|subject) )#
+anovaTAB(fm, data)#
+lsmeans (fm, pairwise ~ phase)
+rm( list = ls() )#
+#
+# condition phase block subject accuracy#
+#
+data <- read.table("anova_savings_all_blocks", header = TRUE)#
+#
+condition <- factor(data$condition)#
+phase <- factor(data$phase)#
+block <- factor(data$block)#
+subject <- factor(data$subject)#
+accuracy <- data$accuracy#
+#
+data <- data.frame(condition, phase, block, subject, accuracy)#
+#
+fm <- lmer( accuracy ~ condition + (1|subject) )#
+anovaTAB(fm, data)#
+lsmeans (fm, pairwise ~ phase)
+rm( list = ls() )#
+#
+# condition phase block subject accuracy#
+#
+data <- read.table("anova_savings_all_blocks", header = TRUE)#
+#
+condition <- factor(data$condition)#
+phase <- factor(data$phase)#
+block <- factor(data$block)#
+subject <- factor(data$subject)#
+accuracy <- data$accuracy#
+#
+data <- data.frame(condition, phase, block, subject, accuracy)#
+#
+fm <- lmer( accuracy ~ condition*block + (1|subject) )#
+anovaTAB(fm, data)#
+lsmeans (fm, pairwise ~ condition)
+rm( list = ls() )#
+#
+# condition phase block subject accuracy#
+#
+data <- read.table("anova_savings_all_blocks", header = TRUE)#
+#
+condition <- factor(data$condition)#
+phase <- factor(data$phase)#
+block <- factor(data$block)#
+subject <- factor(data$subject)#
+accuracy <- data$accuracy#
+#
+data <- data.frame(condition, phase, block, subject, accuracy)#
+#
+fm <- lmer( accuracy ~ condition + (1|subject) )#
+anovaTAB(fm, data)#
+lsmeans (fm, pairwise ~ condition)
+rm( list = ls() )#
+#
+# condition phase block subject accuracy#
+#
+data <- read.table("anova_ac", header = TRUE)#
+#
+condition <- factor(data$condition)#
+phase <- factor(data$phase)#
+block <- factor(data$block)#
+subject <- factor(data$subject)#
+accuracy <- data$accuracy#
+#
+data <- data.frame(condition, phase, block, subject, accuracy)#
+#
+fm <- lmer( accuracy ~ condition*block + (1|subject) )#
+anovaTAB(fm, data)#
+lsmeansTAB(fm, data)#
+lsmeans (fm, pairwise ~ condition)
+rm( list = ls() )#
+#
+# condition phase block subject accuracy#
+#
+data <- read.table("anova_ext", header = TRUE)#
+#
+condition <- factor(data$condition)#
+phase <- factor(data$phase)#
+block <- factor(data$block)#
+subject <- factor(data$subject)#
+accuracy <- data$accuracy#
+#
+data <- data.frame(condition, phase, block, subject, accuracy)#
+#
+fm <- lmer( accuracy ~ condition*block + (1|subject) )#
+anovaTAB(fm, data)#
+lsmeansTAB(fm, data)#
+lsmeans (fm, pairwise ~ condition)
+rm( list = ls() )#
+#
+# condition phase block subject accuracy#
+#
+data <- read.table("anova_1", header = TRUE)#
+#
+condition <- factor(data$condition)#
+phase <- factor(data$phase)#
+block <- factor(data$block)#
+subject <- factor(data$subject)#
+accuracy <- data$accuracy#
+#
+data <- data.frame(condition, phase, block, subject, accuracy)#
+#
+fm <- lmer( accuracy ~ phase + (1|subject) )#
+anovaTAB(fm, data)#
+lsmeansTAB(fm, data)#
+lsmeans (fm, pairwise ~ phase)
+Least Squares Means table:#
+         phase Estimate Standard Error   DF t-value Lower CI Upper CI p-value    #
+phase  1   1.0   0.5806         0.0204 31.8 28.5100    0.539    0.622  <2e-16 ***#
+phase  2   2.0   0.4209         0.0196 27.4 21.4600    0.381    0.461  <2e-16 ***#
+phase  3   3.0   0.5048         0.0231 52.4 21.8200    0.458    0.551  <2e-16 ***
+rm( list = ls() )#
+#
+# condition phase block subject accuracy#
+#
+data <- read.table("anova_2", header = TRUE)#
+#
+condition <- factor(data$condition)#
+phase <- factor(data$phase)#
+block <- factor(data$block)#
+subject <- factor(data$subject)#
+accuracy <- data$accuracy#
+#
+data <- data.frame(condition, phase, block, subject, accuracy)#
+#
+fm <- lmer( accuracy ~ phase + (1|subject) )#
+anovaTAB(fm, data)#
+lsmeansTAB(fm, data)#
+lsmeans (fm, pairwise ~ phase)
+rm( list = ls() )#
+#
+# condition phase block subject accuracy#
+#
+data <- read.table("anova_3", header = TRUE)#
+#
+condition <- factor(data$condition)#
+phase <- factor(data$phase)#
+block <- factor(data$block)#
+subject <- factor(data$subject)#
+accuracy <- data$accuracy#
+#
+data <- data.frame(condition, phase, block, subject, accuracy)#
+#
+fm <- lmer( accuracy ~ phase + (1|subject) )#
+anovaTAB(fm, data)#
+lsmeansTAB(fm, data)#
+lsmeans (fm, pairwise ~ phase)
+rm( list = ls() )#
+#
+# condition phase block subject accuracy#
+#
+data <- read.table("anova_4", header = TRUE)#
+#
+condition <- factor(data$condition)#
+phase <- factor(data$phase)#
+block <- factor(data$block)#
+subject <- factor(data$subject)#
+accuracy <- data$accuracy#
+#
+data <- data.frame(condition, phase, block, subject, accuracy)#
+#
+fm <- lmer( accuracy ~ phase + (1|subject) )#
+anovaTAB(fm, data)#
+lsmeansTAB(fm, data)#
+lsmeans (fm, pairwise ~ phase)
+rm( list = ls() )#
+#
+# condition phase block subject accuracy#
+#
+data <- read.table("anova_1", header = TRUE)#
+#
+condition <- factor(data$condition)#
+phase <- factor(data$phase)#
+block <- factor(data$block)#
+subject <- factor(data$subject)#
+accuracy <- data$accuracy#
+#
+data <- data.frame(condition, phase, block, subject, accuracy)#
+#
+fm <- lmer( accuracy ~ phase + (1|subject) )#
+anovaTAB(fm, data)#
+lsmeansTAB(fm, data)#
+lsmeans (fm, pairwise ~ phase)
+rm( list = ls() )#
+#
+# condition phase block subject accuracy#
+#
+data <- read.table("anova_2", header = TRUE)#
+#
+condition <- factor(data$condition)#
+phase <- factor(data$phase)#
+block <- factor(data$block)#
+subject <- factor(data$subject)#
+accuracy <- data$accuracy#
+#
+data <- data.frame(condition, phase, block, subject, accuracy)#
+#
+fm <- lmer( accuracy ~ phase + (1|subject) )#
+anovaTAB(fm, data)#
+lsmeansTAB(fm, data)#
+lsmeans (fm, pairwise ~ phase)
+rm( list = ls() )#
+#
+# condition phase block subject accuracy#
+#
+data <- read.table("anova_3", header = TRUE)#
+#
+condition <- factor(data$condition)#
+phase <- factor(data$phase)#
+block <- factor(data$block)#
+subject <- factor(data$subject)#
+accuracy <- data$accuracy#
+#
+data <- data.frame(condition, phase, block, subject, accuracy)#
+#
+fm <- lmer( accuracy ~ phase + (1|subject) )#
+anovaTAB(fm, data)#
+lsmeansTAB(fm, data)#
+lsmeans (fm, pairwise ~ phase)
+rm( list = ls() )#
+#
+# condition phase block subject accuracy#
+#
+data <- read.table("anova_1", header = TRUE)#
+#
+condition <- factor(data$condition)#
+phase <- factor(data$phase)#
+block <- factor(data$block)#
+subject <- factor(data$subject)#
+accuracy <- data$accuracy#
+#
+data <- data.frame(condition, phase, block, subject, accuracy)#
+#
+fm <- lmer( accuracy ~ phase + (1|subject) )#
+anovaTAB(fm, data)#
+lsmeansTAB(fm, data)#
+lsmeans (fm, pairwise ~ phase)
+rm( list = ls() )#
+#
+# condition phase block subject accuracy#
+#
+data <- read.table("anova_savings", header = TRUE)#
+#
+condition <- factor(data$condition)#
+phase <- factor(data$phase)#
+block <- factor(data$block)#
+subject <- factor(data$subject)#
+accuracy <- data$accuracy#
+#
+data <- data.frame(condition, phase, block, subject, accuracy)#
+#
+fm <- lmer( accuracy ~ condition + (1|subject) )#
+anovaTAB(fm, data)#
+lsmeans (fm, pairwise ~ condition)
+rm( list = ls() )#
+#
+# condition phase block subject accuracy#
+#
+data <- read.table("anova_savings_corr", header = TRUE)#
+#
+condition <- factor(data$condition)#
+subject <- factor(data$subject)#
+accuracy_dt <- data$accuracy_dt#
+savings <- data$savings#
+#
+data <- data.frame(condition, subject, accuracy_dt, savings)#
+#
+fm <- lmer( savings ~ accuracy_dt + (1|subject) )#
+anovaTAB(fm, data)#
+lsmeans (fm, pairwise ~ condition)
+rm( list = ls() )#
+#
+# condition phase block subject accuracy#
+#
+data <- read.table("anova_savings_corr", header = TRUE)#
+#
+condition <- factor(data$condition)#
+subject <- factor(data$subject)#
+dt_accuracy <- data$dt_accuracy#
+savings <- data$savings#
+#
+data <- data.frame(condition, subject, dt_accuracy, savings)#
+#
+fm <- lmer( savings ~ dt_accuracy + (1|subject) )#
+anovaTAB(fm, data)
+rm( list = ls() )#
+#
+# condition phase block subject accuracy#
+#
+data <- read.table("anova_savings_corr", header = TRUE)#
+#
+condition <- factor(data$condition)#
+subject <- factor(data$subject)#
+dt_accuracy <- data$dt_accuracy#
+savings <- data$savings#
+#
+data <- data.frame(condition, subject, dt_accuracy, savings)#
+#
+fm <- lmer( savings ~ dt_accuracy + (1|subject) )#
+anovaTAB(fm, data)#
+lsmeansTAB(fm, data)
+rm( list = ls() )#
+#
+# condition phase block subject accuracy#
+#
+data <- read.table("anova_savings_corr", header = TRUE)#
+#
+condition <- factor(data$condition)#
+subject <- factor(data$subject)#
+dt_accuracy <- data$dt_accuracy#
+savings <- data$savings#
+intervention <- data$intervention#
+#
+data <- data.frame(condition, subject, dt_accuracy, savings, intervention)#
+#
+fm <- lmer( savings ~ dt_accuracy + (1|subject) )#
+#
+anovaTAB(fm, data)#
+lsmeansTAB(fm, data)#
+#
+fm <- lmer( savings ~ intervention + (1|subject) )#
+anovaTAB(fm, data)#
+lsmeansTAB(fm, data)
+fm <- lmer( savings ~ dt_accuracy*intervention + (1|subject) )#
+anovaTAB(fm, data)#
+lsmeansTAB(fm, data)
+fm <- lmer( savings ~ dt_accuracy*intervention + (1|subject) )#
+anovaTAB(fm, data)#
+lsmeans(fm)
+rm( list = ls() )#
+#
+# condition phase block subject accuracy#
+#
+data <- read.table("anova_savings_corr", header = TRUE)#
+#
+condition <- factor(data$condition)#
+subject <- factor(data$subject)#
+dt_accuracy <- data$dt_accuracy#
+savings <- data$savings#
+intervention <- data$intervention#
+#
+data <- data.frame(condition, subject, dt_accuracy, savings, intervention)#
+#
+# Multiple Linear Regression Example #
+fit <- lm(savings ~ dt_accuracy*intervention, data=data)#
+summary(fit) # show results
+diagnostic plots #
+layout(matrix(c(1,2,3,4),2,2)) # optional 4 graphs/page #
+plot(fit)
+rm( list = ls() )#
+#
+# condition phase block subject accuracy#
+#
+data <- read.table("anova_savings_corr", header = TRUE)#
+#
+condition <- factor(data$condition)#
+subject <- factor(data$subject)#
+dt_accuracy <- data$dt_accuracy#
+savings <- data$savings#
+intervention <- data$intervention#
+#
+data <- data.frame(condition, subject, dt_accuracy, savings, intervention)#
+#
+# Multiple Linear Regression Example #
+fit <- lm(savings ~ dt_accuracy*intervention, data=data)#
+summary(fit) # show results#
+#
+# compare models#
+fit1 <- lm(savings ~ dt_accuracy*intervention, data=data)#
+fit2 <- lm(savings ~ dt_accuracy)#
+fit3 <- lm(savings ~ dt_accuracy)#
+anova(fit1, fit2)#
+anova(fit1, fit3)
+rm( list = ls() )#
+#
+# condition phase block subject accuracy#
+#
+data <- read.table("anova_savings_corr", header = TRUE)#
+#
+condition <- factor(data$condition)#
+subject <- factor(data$subject)#
+dt_accuracy <- data$dt_accuracy#
+savings <- data$savings#
+intervention <- data$intervention#
+#
+data <- data.frame(condition, subject, dt_accuracy, savings, intervention)#
+#
+# Multiple Linear Regression Example #
+fit <- lm(savings ~ dt_accuracy, data=data)#
+summary(fit) # show results
+rm( list = ls() )#
+#
+# condition phase block subject accuracy#
+#
+data <- read.table("anova_savings_corr", header = TRUE)#
+#
+condition <- factor(data$condition)#
+subject <- factor(data$subject)#
+dt_accuracy <- data$dt_accuracy#
+savings <- data$savings#
+intervention <- data$intervention#
+#
+data <- data.frame(condition, subject, dt_accuracy, savings, intervention)#
+#
+# Multiple Linear Regression Example #
+fit <- lm(savings ~ intervention, data=data)#
+summary(fit) # show results
+rm( list = ls() )#
+#
+# condition phase block subject accuracy#
+#
+data <- read.table("anova_savings_corr", header = TRUE)#
+#
+condition <- factor(data$condition)#
+subject <- factor(data$subject)#
+dt_accuracy <- data$dt_accuracy#
+savings <- data$savings#
+intervention <- data$intervention#
+#
+data <- data.frame(condition, subject, dt_accuracy, savings, intervention)
+fm <- lmer( savings ~ dt_accuracy*intervention + (1|subject) )
+summary(fm)
+fm <- lmer( savings ~ dt_accuracy intervention + (1|subject) )
+fm <- lmer( savings ~ dt_accuracy + intervention + (1|subject) )
+summary(fm)
+rm( list = ls() )#
+#
+# condition phase block subject accuracy#
+#
+data <- read.table("anova_savings_corr", header = TRUE)#
+#
+condition <- factor(data$condition)#
+subject <- factor(data$subject)#
+dt_accuracy <- data$dt_accuracy#
+savings <- data$savings#
+intervention <- data$intervention#
+#
+data <- data.frame(condition, subject, dt_accuracy, savings, intervention)#
+#
+# Multiple Linear Regression Example #
+fit <- fm <- lmer( savings ~ dt_accuracy*intervention + (1|subject) )#
+summary(fit) # show results#
+#
+# compare models#
+fit1 <- lm(savings ~ dt_accuracy + intervention, data=data)#
+fit2 <- lm(savings ~ dt_accuracy)#
+fit3 <- lm(savings ~ dt_accuracy)#
+anova(fit1, fit2)#
+anova(fit1, fit3)
+rm( list = ls() )#
+#
+# condition phase block subject accuracy#
+#
+data <- read.table("anova_savings_corr", header = TRUE)#
+#
+condition <- factor(data$condition)#
+subject <- factor(data$subject)#
+dt_accuracy <- data$dt_accuracy#
+savings <- data$savings#
+intervention <- data$intervention#
+#
+data <- data.frame(condition, subject, dt_accuracy, savings, intervention)#
+#
+# Multiple Linear Regression Example #
+fit <- fm <- lm( savings ~ dt_accuracy + intervention )#
+summary(fit) # show results#
+#
+# compare models#
+fit1 <- lm(savings ~ dt_accuracy + intervention, data=data)#
+fit2 <- lm(savings ~ dt_accuracy)#
+fit3 <- lm(savings ~ dt_accuracy)#
+anova(fit1, fit2)#
+anova(fit1, fit3)
+fit1 <- lm(savings ~ dt_accuracy + intervention, data=data)#
+fit2 <- lm(savings ~ dt_accuracy)#
+fit3 <- lm(savings ~ intervention)#
+anova(fit1, fit2)#
+anova(fit1, fit3)
+fit1 <- lm(savings ~ dt_accuracy + intervention, data=data)#
+fit2 <- lm(savings ~ dt_accuracy)#
+fit3 <- lm(savings ~ intervention)#
+anova(fit1, fit2, fit3)
+fit1 <- lm(savings ~ dt_accuracy + intervention, data=data)#
+fit2 <- lm(savings ~ dt_accuracy)#
+fit3 <- lm(savings ~ intervention)#
+anova(fit3, fit2, fit1)
+fit1 <- lm(savings ~ dt_accuracy + intervention, data=data)#
+fit2 <- lm(savings ~ dt_accuracy)#
+fit3 <- lm(savings ~ intervention)#
+anova(fit3, fit2, fit1, test = "F")
+fit1 <- lm(savings ~ dt_accuracy + intervention, data=data)#
+fit2 <- lm(savings ~ dt_accuracy)#
+fit3 <- lm(savings ~ intervention)#
+anova(fit3, fit2, fit1, test = "Cp")
+fit1 <- lm(savings ~ dt_accuracy + intervention, data=data)#
+fit2 <- lm(savings ~ dt_accuracy)#
+fit3 <- lm(savings ~ intervention)#
+anova(fit3, fit2, fit1, test = "F")
+fit1 <- lm(savings ~ dt_accuracy + intervention, data=data)#
+fit2 <- lm(savings ~ dt_accuracy)#
+fit3 <- lm(savings ~ intervention)#
+anova.lm(fit3, fit2, fit1, test = "F")
+fit1 <- lm(savings ~ dt_accuracy + intervention, data=data)#
+fit2 <- lm(savings ~ dt_accuracy)#
+fit3 <- lm(savings ~ intervention)#
+anova.lm(fit1)
+fit1 <- lm(savings ~ dt_accuracy + intervention, data=data)#
+fit2 <- lm(savings ~ dt_accuracy)#
+fit3 <- lm(savings ~ intervention)#
+anova(fit1)
+fit1 <- lm(savings ~ dt_accuracy + intervention, data=data)#
+fit2 <- lm(savings ~ dt_accuracy)#
+fit3 <- lm(savings ~ intervention)summary(fit) # show results#
+summary(fit1)#
+summary(fit2)#
+summary(fit3)
+anova(fit1, fit2, fit3)
+anova(fit1, fit2)#
+anova(fit1, fit3)#
+anova(fit2, fit3)
+anova(fit3, fit2)
+anova(fit1, fit2)#
+anova(fit1, fit3)
+Multiple Linear Regression Example #
+fit1 <- lm(savings ~ dt_accuracy + intervention, data=data)#
+fit2 <- lm(savings ~ dt_accuracy)#
+fit3 <- lm(savings ~ intervention)summary(fit) # show results#
+summary(fit1)#
+summary(fit2)#
+summary(fit3)#
+anova(fit1, fit2)#
+anova(fit1, fit3)
+fit1 <- lm(savings ~ dt_accuracy + intervention, data=data)#
+fit2 <- lm(savings ~ dt_accuracy, data=data)#
+fit3 <- lm(savings ~ intervention, data=data)
+anova(fit1, fit2)#
+anova(fit1, fit3)#
+anova(fit3, fit2)
+summary(fit1)#
+summary(fit2)#
+summary(fit3)
+fit1 <- lm(savings ~ dt_accuracy*intervention, data=data)#
+fit2 <- lm(savings ~ dt_accuracy, data=data)#
+fit3 <- lm(savings ~ intervention, data=data)#
+summary(fit1)#
+summary(fit2)#
+summary(fit3)
+anova(fit1, fit2)#
+anova(fit1, fit3)#
+anova(fit3, fit2)
+fit1 <- lm(savings ~ dt_accuracy+intervention, data=data)#
+fit2 <- lm(savings ~ dt_accuracy, data=data)#
+fit3 <- lm(savings ~ intervention, data=data)#
+summary(fit1)#
+summary(fit2)#
+summary(fit3)#
+anova(fit1, fit2)#
+anova(fit1, fit3)#
+anova(fit3, fit2)
+rm( list = ls() )#
+#
+# condition phase block subject accuracy#
+#
+data <- read.table("anova_all", header = TRUE)#
+#
+condition <- factor(data$condition)#
+phase <- factor(data$phase)#
+block <- factor(data$block)#
+subject <- factor(data$subject)#
+accuracy <- data$accuracy#
+#
+data <- data.frame(condition, phase, block, subject, accuracy)#
+#
+fm <- lmer( accuracy ~ condition*block + (1|subject) )#
+anovaTAB(fm, data)#
+lsmeansTAB(fm, data)#
+lsmeans (fm, pairwise ~ condition)
+rm( list = ls() )#
+#
+# condition phase block subject accuracy#
+#
+data <- read.table("anova_ac", header = TRUE)#
+#
+condition <- factor(data$condition)#
+phase <- factor(data$phase)#
+block <- factor(data$block)#
+subject <- factor(data$subject)#
+accuracy <- data$accuracy#
+#
+data <- data.frame(condition, phase, block, subject, accuracy)#
+#
+fm <- lmer( accuracy ~ condition*block + (1|subject) )#
+anovaTAB(fm, data)#
+lsmeansTAB(fm, data)#
+lsmeans (fm, pairwise ~ condition)
+AcquisitionCondition	F(x,x) = xx, P = xxBlock	F(x,x) = xx, P = xxInteraction	F(x,x) = xx, P = xxInterventionCondition	F(x,x) = xx, P = xxBlock	F(x,x) = xx, P = xxInteraction	F(x,x) = xx, P = xxPosthoc Tukey HSD Pairwise ComparisonII – RB	p < 0.001
+rm( list = ls() )#
+#
+# condition phase block subject accuracy#
+#
+data <- read.table("anova_ext", header = TRUE)#
+#
+condition <- factor(data$condition)#
+phase <- factor(data$phase)#
+block <- factor(data$block)#
+subject <- factor(data$subject)#
+accuracy <- data$accuracy#
+#
+data <- data.frame(condition, phase, block, subject, accuracy)#
+#
+fm <- lmer( accuracy ~ condition*block + (1|subject) )#
+anovaTAB(fm, data)#
+lsmeansTAB(fm, data)#
+lsmeans (fm, pairwise ~ condition)
+rm( list = ls() )#
+#
+# condition phase block subject accuracy#
+#
+data <- read.table("anova_reac", header = TRUE)#
+#
+condition <- factor(data$condition)#
+phase <- factor(data$phase)#
+block <- factor(data$block)#
+subject <- factor(data$subject)#
+accuracy <- data$accuracy#
+#
+data <- data.frame(condition, phase, block, subject, accuracy)#
+#
+fm <- lmer( accuracy ~ condition*block + (1|subject) )#
+anovaTAB(fm, data)#
+lsmeans (fm, pairwise ~ condition)
+rm( list = ls() )#
+#
+# condition phase block subject accuracy#
+#
+data <- read.table("anova_savings", header = TRUE)#
+#
+condition <- factor(data$condition)#
+phase <- factor(data$phase)#
+block <- factor(data$block)#
+subject <- factor(data$subject)#
+accuracy <- data$accuracy#
+#
+data <- data.frame(condition, phase, block, subject, accuracy)#
+#
+fm <- lmer( accuracy ~ condition*block + (1|subject) )#
+anovaTAB(fm, data)#
+lsmeansTAB(fm, data)#
+lsmeans (fm, pairwise ~ condition)
+rm( list = ls() )#
+#
+# condition phase block subject accuracy#
+#
+data <- read.table("anova_all", header = TRUE)#
+#
+condition <- factor(data$condition)#
+phase <- factor(data$phase)#
+block <- factor(data$block)#
+subject <- factor(data$subject)#
+accuracy <- data$accuracy#
+#
+data <- data.frame(condition, phase, block, subject, accuracy)#
+#
+fm <- lmer( accuracy ~ condition*phase + (1|subject) )#
+anova(fm)#
+difflsmeans(fm, test.effs="condition:phase",adjust="tukey")
+plot(lsmeans(fm))
+plot(lsmeans(fm,pairwise ~ condition))
+plot(difflsmeans(fm, test.effs="condition:phase",adjust="tukey"))
+data <- read.table("anova_ext", header = TRUE)#
+#
+condition <- factor(data$condition)#
+phase <- factor(data$phase)#
+block <- factor(data$block)#
+subject <- factor(data$subject)#
+accuracy <- data$accuracy#
+#
+data <- data.frame(condition, phase, block, subject, accuracy)
+fm <- lmer( accuracy ~ condition*phase + (1|subject) )#
+anova(fm)
+fm <- lmer( accuracy ~ condition + (1|subject) )
+anova(fm)
+difflsmeans(fm, test.effs="condition",adjust="tukey")
+rm( list = ls() )#
+#
+# condition phase block subject accuracy#
+#
+data <- read.table("anova_all", header = TRUE)#
+#
+condition <- factor(data$condition)#
+phase <- factor(data$phase)#
+block <- factor(data$block)#
+subject <- factor(data$subject)#
+accuracy <- data$accuracy#
+#
+data <- data.frame(condition, phase, block, subject, accuracy)#
+#
+fm <- lmer( accuracy ~ condition*block + (1|subject) )#
+anova(fm)#
+difflsmeans(fm, test.effs="condition:block",adjust="tukey")
+rm( list = ls() )#
+#
+# condition phase block subject accuracy#
+#
+data <- read.table("anova_all", header = TRUE)#
+#
+condition <- factor(data$condition)#
+phase <- factor(data$phase)#
+block <- factor(data$block)#
+subject <- factor(data$subject)#
+accuracy <- data$accuracy#
+#
+data <- data.frame(condition, phase, block, subject, accuracy)#
+#
+fm <- lmer( accuracy ~ condition*phase + (1|subject) )#
+anova(fm)#
+difflsmeans(fm, test.effs="condition:phase",adjust="tukey")
+summary(fm)
+rm( list = ls() )#
+#
+# condition phase block subject accuracy#
+#
+data <- read.table("anova_all", header = TRUE)#
+#
+condition <- factor(data$condition)#
+phase <- factor(data$phase)#
+block <- factor(data$block)#
+subject <- factor(data$subject)#
+accuracy <- data$accuracy#
+#
+data <- data.frame(condition, phase, block, subject, accuracy)#
+#
+fm <- lmer( accuracy ~ condition*phase + (1|subject) )#
+anova(fm)#
+difflsmeans(fm, test.effs="condition:phase",adjust="tukey")
+summary(anova)
+summary(fm)
+rm( list = ls() )#
+#
+# condition phase block subject accuracy#
+#
+data <- read.table("anova_ext", header = TRUE)#
+#
+condition <- factor(data$condition)#
+phase <- factor(data$phase)#
+block <- factor(data$block)#
+subject <- factor(data$subject)#
+accuracy <- data$accuracy#
+#
+data <- data.frame(condition, phase, block, subject, accuracy)#
+#
+fm <- lmer( accuracy ~ condition*block + (1|subject) )#
+anova(fm)#
+difflsmeans(fm, test.effs="condition",adjust="tukey")
+rm( list = ls() )#
+#
+# condition phase block subject accuracy#
+#
+data <- read.table("anova_all", header = TRUE)#
+#
+condition <- factor(data$condition)#
+phase <- factor(data$phase)#
+block <- factor(data$block)#
+subject <- factor(data$subject)#
+accuracy <- data$accuracy#
+#
+data <- data.frame(condition, phase, block, subject, accuracy)#
+#
+fm <- lmer( accuracy ~ condition*block + (1|subject) )#
+anova(fm)#
+difflsmeans(fm, test.effs="block",adjust="tukey")
+difflsmeans(fm, test.effs="condition",adjust="tukey")
+rm( list = ls() )#
+#
+# condition phase block subject accuracy#
+#
+data <- read.table("anova_ext", header = TRUE)#
+#
+condition <- factor(data$condition)#
+phase <- factor(data$phase)#
+block <- factor(data$block)#
+subject <- factor(data$subject)#
+accuracy <- data$accuracy#
+#
+data <- data.frame(condition, phase, block, subject, accuracy)#
+#
+fm <- lmer( accuracy ~ condition*block + (1|subject) )#
+anova(fm)#
+difflsmeans(fm, test.effs="condition",adjust="tukey")
+rm( list = ls() )#
+#
+# condition phase block subject accuracy#
+#
+data <- read.table("anova_all", header = TRUE)#
+#
+condition <- factor(data$condition)#
+phase <- factor(data$phase)#
+block <- factor(data$block)#
+subject <- factor(data$subject)#
+accuracy <- data$accuracy#
+#
+data <- data.frame(condition, phase, block, subject, accuracy)#
+#
+fm <- lmer( accuracy ~ condition*phase + (1|subject) )#
+anova(fm)#
+difflsmeans(fm, test.effs="condition:phase",adjust="tukey")
+lsmeans(fm)
+lsmeans(fm,pairwise~condition)
+rm( list = ls() )#
+#
+# condition phase block subject accuracy#
+#
+data <- read.table("anova_ext", header = TRUE)#
+#
+condition <- factor(data$condition)#
+phase <- factor(data$phase)#
+block <- factor(data$block)#
+subject <- factor(data$subject)#
+accuracy <- data$accuracy#
+#
+data <- data.frame(condition, phase, block, subject, accuracy)#
+#
+fm <- lmer( accuracy ~ condition*phase + (1|subject) )#
+anova(fm)
+rm( list = ls() )#
+#
+# condition phase block subject accuracy#
+#
+data <- read.table("anova_ext", header = TRUE)#
+#
+condition <- factor(data$condition)#
+phase <- factor(data$phase)#
+block <- factor(data$block)#
+subject <- factor(data$subject)#
+accuracy <- data$accuracy#
+#
+data <- data.frame(condition, phase, block, subject, accuracy)#
+#
+fm <- lmer( accuracy ~ condition + (1|subject) )#
+anova(fm)
+lsmeans(fm,pairwise ~ condition)
+rm( list = ls() )#
+#
+# condition phase block subject accuracy#
+#
+data <- read.table("anova_savings", header = TRUE)#
+#
+condition <- factor(data$condition)#
+phase <- factor(data$phase)#
+block <- factor(data$block)#
+subject <- factor(data$subject)#
+accuracy <- data$accuracy#
+#
+data <- data.frame(condition, phase, block, subject, accuracy)#
+#
+fm <- lmer( accuracy ~ condition + (1|subject) )#
+anova(fm)#
+difflsmeans(fm, test.effs="condition",adjust="tukey")
+lsmeans(fm)
+lsmeans(fm,condition)
+lsmeans(fm,pairwise~condition)
+rm( list = ls() )#
+#
+# condition phase block subject accuracy#
+#
+data <- read.table("anova_all", header = TRUE)#
+#
+condition <- factor(data$condition)#
+phase <- factor(data$phase)#
+block <- factor(data$block)#
+subject <- factor(data$subject)#
+accuracy <- data$accuracy#
+#
+data <- data.frame(condition, phase, block, subject, accuracy)#
+#
+fm <- lmer( accuracy ~ condition*phase + (1|subject) )#
+anova(fm)#
+difflsmeans(fm, test.effs="condition:phase",adjust="tukey")
+rm( list = ls() )#
+#
+# condition phase block subject accuracy#
+#
+data <- read.table("anova_all", header = TRUE)#
+#
+condition <- factor(data$condition)#
+savings_phase <- factor(data$savings_phase)#
+phase <- factor(data$phase)#
+block <- factor(data$block)#
+subject <- factor(data$subject)#
+accuracy <- data$accuracy#
+#
+data <- data.frame(condition, savings_phase, phase, block, subject, accuracy)#
+#
+fm <- lmer( accuracy ~ condition*phase + (1|subject) )#
+anova(fm)
+difflsmeans(fm, test.effs="condition:savings_phase",adjust="tukey")
+savings_phase
+condition
+fm
+fm <- lmer( accuracy ~ condition*savings_phase + (1|subject) )#
+difflsmeans(fm, test.effs="condition:savings_phase",adjust="tukey")
+rm( list = ls() )#
+data <- read.table("anova_savings", header = TRUE)#
+condition <- factor(data$condition)#
+savings_phase <- factor(data$savings_phase)#
+phase <- factor(data$phase)#
+block <- factor(data$block)#
+subject <- factor(data$subject)#
+accuracy <- data$accuracy#
+data <- data.frame(condition, savings_phase, phase, block, subject, accuracy)#
+#
+fm <- lmer( accuracy ~ condition*phase + (1|subject) )
+rm( list = ls() )#
+data <- read.table("anova_savings", header = TRUE)#
+condition <- factor(data$condition)#
+phase <- factor(data$phase)#
+block <- factor(data$block)#
+subject <- factor(data$subject)#
+accuracy <- data$accuracy#
+data <- data.frame(condition, phase, block, subject, accuracy)#
+#
+fm <- lmer( accuracy ~ condition*phase + (1|subject) )
+phase
+rm( list = ls() )#
+data <- read.table("anova_savings", header = TRUE)#
+condition <- factor(data$condition)#
+phase <- factor(data$phase)#
+block <- factor(data$block)#
+subject <- factor(data$subject)#
+accuracy <- data$accuracy#
+data <- data.frame(condition, phase, block, subject, accuracy)#
+#
+fm <- lmer( accuracy ~ condition*phase + (1|subject) )
+anova(fm)
+difflsmeans(fm, test.effs="condition:phase",adjust="tukey")
+rm( list = ls() )#
+data <- read.table("anova_savings", header = TRUE)#
+condition <- factor(data$condition)#
+phase <- factor(data$phase)#
+block <- factor(data$block)#
+subject <- factor(data$subject)#
+accuracy <- data$accuracy#
+data <- data.frame(condition, phase, block, subject, accuracy)#
+#
+fm <- lmer( accuracy ~ condition*phase + (1|subject) )#
+anova(fm)
+rm( list = ls() )#
+data <- read.table("anova_savings", header = TRUE)#
+condition <- factor(data$condition)#
+phase <- factor(data$phase)#
+block <- factor(data$block)#
+subject <- factor(data$subject)#
+accuracy <- data$accuracy#
+data <- data.frame(condition, phase, block, subject, accuracy)#
+#
+fm <- lmer( accuracy ~ condition*phase + (1|subject) )
+condition
+phase
+rm( list = ls() )#
+data <- read.table("anova_savings", header = TRUE)#
+condition <- factor(data$condition)#
+phase <- factor(data$phase)#
+block <- factor(data$block)#
+subject <- factor(data$subject)#
+accuracy <- data$accuracy#
+data <- data.frame(condition, phase, block, subject, accuracy)
+fm <- lmer( accuracy ~ condition + (1|subject) )
+anova(fm)
+difflsmeans(fm, test.effs="condition",adjust="tukey")
+lsmeans(fm, test.effs="condition")
+plot(lsmeans(fm, test.effs="condition"))
+rm( list = ls() )#
+data <- read.table("anova_all", header = TRUE)#
+condition <- factor(data$condition)#
+phase <- factor(data$phase)#
+phase_s <- factor(data$phase_s)#
+block <- factor(data$block)#
+subject <- factor(data$subject)#
+accuracy <- data$accuracy#
+data <- data.frame(condition, phase_s, phase, block, subject, accuracy)#
+#
+fm <- lmer( accuracy ~ condition* phase_s + (1|subject) )
+difflsmeans(fm, test.effs="condition:phase",adjust="tukey")
+difflsmeans(fm, test.effs="condition:phase_s",adjust="tukey")
+rm( list = ls() )#
+data <- read.table("anova_all", header = TRUE)#
+condition <- factor(data$condition)#
+phase <- factor(data$phase)#
+phase_s <- factor(data$phase_s)#
+block <- factor(data$block)#
+subject <- factor(data$subject)#
+accuracy <- data$accuracy#
+data <- data.frame(condition, phase_s, phase, block, subject, accuracy)
+fm <- lmer( accuracy ~ condition*phase_s + (1|subject) )
+rm( list = ls() )#
+data <- read.table("anova_all", header = TRUE)#
+condition <- factor(data$condition)#
+phase <- factor(data$phase)#
+phase_s <- factor(data$phase_s)#
+block <- factor(data$block)#
+subject <- factor(data$subject)#
+accuracy <- data$accuracy#
+data <- data.frame(condition, phase_s, phase, block, subject, accuracy)#
+#
+fm <- lmer( accuracy ~ condition*phase_s + (1|subject) )
+difflsmeans(fm, test.effs="condition: phase_s",adjust="tukey")
+difflsmeans(fm, test.effs="condition:phase_s",adjust="tukey")

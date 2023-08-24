@@ -1,0 +1,84 @@
+cd /Volumes/Media/lab/experiments/Unlearning/R_analyses
+clear
+clc
+help.start()
+x<-rnorm(50)
+y<-rnorm(x)
+ls()
+plot(x,y)
+rm(x,y)
+ls()
+x<-1:20
+w<-1-sqrt(x)/2
+dummy=data.frame(x=x, y=x+rnorm(x)*w)
+fm<-lm(y~x, data=dummy)
+summary(fm)
+dummy
+fm1<-lm(y~x, data=dummy, weight=1/w^2)
+fm1 <- lm(y ~ x, data=dummy, weight=1/w^2)
+x
+y
+weight
+w
+w'
+ww
+adasd
+FDA
+F
+''
+attach(dummy)
+clear()
+ls()
+w
+x
+dummy
+fm
+fm1<-lm(y~x, data=dummy, weight=1/w^2)
+weight=1/w^2
+weight
+getwd()
+setwd(/Volumes/Media/lab/experiments/Unlearning/R_analyses)
+setwd(Volumes/Media/lab/experiments/Unlearning/R_analyses)
+setwd(~/Volumes/Media/lab/experiments/Unlearning/R_analyses)
+setwd(~Volumes/Media/lab/experiments/Unlearning/R_analyses)
+setwd(/Volumes/Media/lab/experiments/Unlearning/R_analyses)
+getwd()
+setwd("/Volumes/Media/lab/experiments/Unlearning/R_analyses")
+getwd
+getwd()
+inp<-scan("ext5_1",list(0,0,0))
+inp<-scan("ext5_1.txt",list(0,0,0,0,0,0,0,0))
+ls()
+clear(dummy)
+rm(dummy)
+ls()
+rm(fm,inp,w,weight,x)
+ls()
+inp<-scan("ext5_1.txt",list(0,0,0,0,0,0,0,0))
+help scan()
+help(scan)
+inp<-scan(ext5_1.txt, numerical)
+gwd()
+getwd()
+inp<-scan("ext5_1.txt", numerical)
+inp<-scan("ext5_1.txt", "numerical")
+ls
+ls()
+rm(inp)
+ls()
+inp<-scan("ext5_1.txt", list(0,0,0,0,0,0,0,0))
+ls()
+inp
+inp
+ls()
+cat<-inp[[2]]
+ls()
+cat
+t(cat)
+ls()
+inp2<-read.table("ext5_1.txt")
+ls()
+inp2
+rm(inp,inp2)
+ls()
+rm(cat)

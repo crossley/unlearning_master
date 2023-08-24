@@ -1,0 +1,108 @@
+This is BibTeX, Version 0.99d (TeX Live 2015)
+Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
+The top-level auxiliary file: udt_combined.aux
+The style file: apacite.bst
+Reallocated glb_str_ptr (elt_size=4) to 20 items from 10.
+Reallocated global_strs (elt_size=20001) to 20 items from 10.
+Reallocated glb_str_end (elt_size=4) to 20 items from 10.
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Reallocated wiz_functions (elt_size=4) to 6000 items from 3000.
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Reallocated wiz_functions (elt_size=4) to 9000 items from 6000.
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Database file #1: bibs/cdl.bib
+Database file #2: bibs/cdl_2.bib
+Repeated entry---line 777 of file bibs/cdl_2.bib
+ : @article{ashby_computational_2011
+ :                                  ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 1657 of file bibs/cdl_2.bib
+ : @article{crossley_erasing_2013
+ :                               ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 1774 of file bibs/cdl_2.bib
+ : @article{joel_actorcritic_2002
+ :                               ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 2254 of file bibs/cdl_2.bib
+ : @article{crossley_expanding_2016
+ :                                 ,
+I'm skipping whatever remains of this entry
+Database file #3: bibs/crossley.bib
+I was expecting a `,' or a `}'---line 1972 of file bibs/crossley.bib
+ : 
+ : @article{LopezPaniaguaSeger2011,
+(Error may have been on previous line)
+I'm skipping whatever remains of this entry
+You're missing a field part---line 3069 of file bibs/crossley.bib
+ : 
+ : }
+(Error may have been on previous line)
+I'm skipping whatever remains of this entry
+You're missing a field name---line 3106 of file bibs/crossley.bib
+ :  
+ :  % volume={},
+(Error may have been on previous line)
+I'm skipping whatever remains of this entry
+You're missing a field name---line 3351 of file bibs/crossley.bib
+ :  
+ :  % Number                   = {643},
+(Error may have been on previous line)
+I'm skipping whatever remains of this entry
+Repeated entry---line 3848 of file bibs/crossley.bib
+ : @article{ashby_computational_2011
+ :                                  ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 3875 of file bibs/crossley.bib
+ : @article{crossley_erasing_2013
+ :                               ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 4185 of file bibs/crossley.bib
+ : @article{crossley_expanding_2016
+ :                                 ,
+I'm skipping whatever remains of this entry
+apacite.bst [2013/07/21 v6.03 APA bibliography style]
+Warning--`others' not consistent with 6th ed. of the APA Manual
+You've used 34 entries,
+            6951 wiz_defined-function locations,
+            1528 strings with 17893 characters,
+and the built_in function-call counts, 73430 in all, are:
+= -- 9165
+> -- 605
+< -- 3705
++ -- 4093
+- -- 71
+* -- 4930
+:= -- 13649
+add.period$ -- 138
+call.type$ -- 34
+change.case$ -- 596
+chr.to.int$ -- 0
+cite$ -- 68
+duplicate$ -- 2029
+empty$ -- 2644
+format.name$ -- 1042
+if$ -- 13676
+int.to.chr$ -- 0
+int.to.str$ -- 106
+missing$ -- 0
+newline$ -- 902
+num.names$ -- 276
+pop$ -- 939
+preamble$ -- 1
+purify$ -- 136
+quote$ -- 0
+skip$ -- 4536
+stack$ -- 0
+substring$ -- 4480
+swap$ -- 1160
+text.length$ -- 76
+text.prefix$ -- 0
+top$ -- 1
+type$ -- 2848
+warning$ -- 1
+while$ -- 355
+width$ -- 0
+write$ -- 1168
+(There were 11 error messages)

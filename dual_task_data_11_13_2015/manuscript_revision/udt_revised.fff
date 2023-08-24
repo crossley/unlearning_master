@@ -1,0 +1,100 @@
+\begin{figure*}[hbt]
+\ifnextchar[{\eatarg}{}
+[t]
+\centering \includegraphics[width=1.0\textwidth]{../figures/fig_trials.pdf}
+  \caption{ \textbf{A:} An Example trial during single-task conditions.
+\textbf{B:} An example trial during dual-task conditions. \textbf{C:} The II
+categories used during the acquisition phase of Crossley et al. (2013). }
+  \label{fig:test_cats}
+\end{figure*}
+\efloatseparator
+ 
+\begin{figure*}[hbt]
+\ifnextchar[{\eatarg}{}
+[h]
+\centering \includegraphics[width=1.0\textwidth]{../figures/fig_models.pdf}
+\caption{ \textbf{A: The Classic Model.} A classic model of procedural
+  learning based on a greatly simplified representation of the ``direct pathway''
+  through the basal ganglia. S-R associations are learned at cortical-striatal
+  synapses, which are modified via dopamine-dependent reinforcement learning. The
+  likelihood of repeating actions that lead to \emph{unexpected} positive outcomes
+  is gradually increased, and the likelihood of repeating actions that lead to
+  \emph{unexpected} negative outcomes is gradually decreased. \textbf{B: The TANs
+    Model.} The classic model of procedural learning with the addition of a
+  context-specific Pf-TAN pathway. This pathway acts as a gate on
+  cortical-striatal synaptic plasticity, permitting or preventing the learning and
+  expression of procedural knowledge. (SPN - spiny projection neuron of the
+  striatum. D1 - Direct pathway SPN expressing the D1 DA receptor. D2 - Indirect
+  pathway SPN expressing the D2 DA receptor. SMA - Supplementary Motor Area. SNpc
+  - substantia nigra pars compacta. Pf - parafascicular nucleus of the thalamus.
+  VIS - visual cortex)}
+  \label{fig:models}
+\end{figure*}
+\efloatseparator
+ 
+\begin{figure*}[hbt]
+\ifnextchar[{\eatarg}{}
+[h]
+\centering \includegraphics[width=1.0\textwidth]{../figures/fig_unlearning_results.pdf}
+\caption{Crossley et al. (2013) behavioral results with different
+  interventions. \textbf{A:} Random feedback intervention with 25\% positive
+  feedback. Accuracy drops to near chance during intervention, but is reacquired
+  faster than original learning in the Relearning condition (red). In contrast, a
+  lasting interference is observed in the New Learning condition (blue). Both
+  results are consistent with the hypothesis that initial learning was not
+  overwritten by random feedback. \textbf{B:} Mixed feedback intervention.
+  Accuracy drops during intervention -- though not to chance (i.e., 25\%) -- but
+  subsequent learning proceeds at approximately the same rate and to the same
+  extent as initial learning when either the original category-response mappings
+  (red) or new category-response mappings (blue) are introduced. These results are
+  consistent with the hypothesis that initial learning was overwritten during the
+  intervention. \textbf{C:} Random feedback intervention with 40\% positive
+  feedback. Results are qualitatively identical to random feedback intervention
+  with 25\% positive feedback, implying that the mixed feedback results were
+  driven by feedback contingency and not by positive feedback. }
+  \label{fig:unlearning_data}
+\end{figure*}
+\efloatseparator
+ 
+\begin{figure*}[hbt]
+\ifnextchar[{\eatarg}{}
+[t]
+\centering \includegraphics[width=1.0\textwidth]{../figures/fig_exc_dual.pdf}
+    \caption{ Histograms showing distribution of mean Numerical Stroop accuracy
+seperately for each condition. \textbf{A:} Condition 1. \textbf{B:} Condition 2.
+\textbf{C:} Condition 3. \textbf{D:} Condition 4. }
+    \label{fig:exc_dual}
+\end{figure*}
+\efloatseparator
+ 
+\begin{figure*}[hbt]
+\ifnextchar[{\eatarg}{}
+[t]
+\centering \includegraphics[width=1.0\textwidth]{../figures/fig_learning_curves.pdf}
+\caption{ Mean accuracy per 25 trial block. The blue line in each panel is
+  Condition 5 (no dual-task control). The hatch marks indicate dual-task trials.
+  The key features are (1) dual-task slows the change in classification strategy
+  (seen in this plot as ``accuracy'' decline), and (2) the dual-task conditions
+  show less savings than the no dual-task control. There is no obvious
+  dose-dependent effect of the dual task, nor is there an obvious difference
+  between dual-task conditions.
+  \textbf{A:} Condition 1 (dual-task applied on trial 251 through trial 350).
+  \textbf{B:} Condition 2 (dual-task applied on trial 251 through trial 450).
+  \textbf{C:} Condition 3 (dual-task applied on trial 251 through trial 550).
+  \textbf{D:} Condition 4 (dual-task applied on trial 351 through trial 650).
+  Error bars are SEM. }
+  \label{fig:learning_curves}
+\end{figure*}
+\efloatseparator
+ 
+\begin{figure*}[hbt]
+\ifnextchar[{\eatarg}{}
+[t]
+\centering \includegraphics[width=1.0\textwidth]{../figures/fig_savings.pdf}
+\caption{Savings (mean of the first 50 reacquisition trials - mean of the first
+  50 acquisition trials) in all conditions of the present experiment.
+  Error bars are SEM.}
+  \label{fig:savings}
+\end{figure*}
+\efloatseparator
+ 

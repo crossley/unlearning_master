@@ -1,0 +1,118 @@
+This is BibTeX, Version 0.99d (TeX Live 2015)
+Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
+The top-level auxiliary file: udt.aux
+The style file: apacite.bst
+Reallocated glb_str_ptr (elt_size=4) to 20 items from 10.
+Reallocated global_strs (elt_size=20001) to 20 items from 10.
+Reallocated glb_str_end (elt_size=4) to 20 items from 10.
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Reallocated wiz_functions (elt_size=4) to 6000 items from 3000.
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Reallocated wiz_functions (elt_size=4) to 9000 items from 6000.
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Database file #1: bibs/cdl.bib
+Database file #2: bibs/cdl_2.bib
+Repeated entry---line 777 of file bibs/cdl_2.bib
+ : @article{ashby_computational_2011
+ :                                  ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 1657 of file bibs/cdl_2.bib
+ : @article{crossley_erasing_2013
+ :                               ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 2254 of file bibs/cdl_2.bib
+ : @article{crossley_expanding_2016
+ :                                 ,
+I'm skipping whatever remains of this entry
+Database file #3: bibs/crossley.bib
+I was expecting a `,' or a `}'---line 293 of file bibs/crossley.bib
+ :   
+ :   journal={Journal of Experimental Psychology: Learning, Memory, and Cognition},
+(Error may have been on previous line)
+I'm skipping whatever remains of this entry
+I was expecting a `,' or a `}'---line 1896 of file bibs/crossley.bib
+ : 
+ : @article{LopezPaniaguaSeger2011,
+(Error may have been on previous line)
+I'm skipping whatever remains of this entry
+You're missing a field part---line 2993 of file bibs/crossley.bib
+ : 
+ : }
+(Error may have been on previous line)
+I'm skipping whatever remains of this entry
+You're missing a field name---line 3030 of file bibs/crossley.bib
+ :  
+ :  % volume={},
+(Error may have been on previous line)
+I'm skipping whatever remains of this entry
+You're missing a field name---line 3275 of file bibs/crossley.bib
+ :  
+ :  % Number                   = {643},
+(Error may have been on previous line)
+I'm skipping whatever remains of this entry
+Repeated entry---line 3772 of file bibs/crossley.bib
+ : @article{ashby_computational_2011
+ :                                  ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 3799 of file bibs/crossley.bib
+ : @article{crossley_erasing_2013
+ :                               ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 4109 of file bibs/crossley.bib
+ : @article{crossley_expanding_2016
+ :                                 ,
+I'm skipping whatever remains of this entry
+Warning--I didn't find a database entry for "bouton1991sources"
+Warning--I didn't find a database entry for "crossley_renewal_2014"
+Warning--I didn't find a database entry for "Tulving2000"
+Warning--I didn't find a database entry for "AshbyValentin2016"
+Warning--I didn't find a database entry for "FiloteoEtAl2007"
+Warning--I didn't find a database entry for "MillerCohen2001"
+Warning--I didn't find a database entry for "JoelNivRuppin2002"
+Warning--I didn't find a database entry for "Romano2010"
+Warning--I didn't find a database entry for "Rozanov_2010"
+Warning--I didn't find a database entry for "Dienes_1997"
+apacite.bst [2013/07/21 v6.03 APA bibliography style]
+You've used 24 entries,
+            6951 wiz_defined-function locations,
+            1471 strings with 15882 characters,
+and the built_in function-call counts, 50985 in all, are:
+= -- 6376
+> -- 415
+< -- 2549
++ -- 2834
+- -- 49
+* -- 3398
+:= -- 9497
+add.period$ -- 97
+call.type$ -- 24
+change.case$ -- 425
+chr.to.int$ -- 0
+cite$ -- 48
+duplicate$ -- 1396
+empty$ -- 1846
+format.name$ -- 712
+if$ -- 9509
+int.to.chr$ -- 0
+int.to.str$ -- 76
+missing$ -- 0
+newline$ -- 628
+num.names$ -- 194
+pop$ -- 682
+preamble$ -- 1
+purify$ -- 96
+quote$ -- 0
+skip$ -- 3151
+stack$ -- 0
+substring$ -- 3109
+swap$ -- 790
+text.length$ -- 54
+text.prefix$ -- 0
+top$ -- 1
+type$ -- 1984
+warning$ -- 0
+while$ -- 239
+width$ -- 0
+write$ -- 805
+(There were 11 error messages)

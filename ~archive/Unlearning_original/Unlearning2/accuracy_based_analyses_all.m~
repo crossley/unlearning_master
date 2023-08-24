@@ -1,0 +1,723 @@
+close all
+clear all
+clc
+
+global color use_II_subs;
+
+figures = 0;
+color = 1;
+use_II_subs = 0;
+
+%% Run basic component scripts to collect data
+
+% Get 100 rand data
+accuracy_based_analysis_100_rand
+learning_curve_100_rand = learning_curve;
+std_err_curve_100_rand = std_err_curve;
+
+sub_accuracy_100_rand = sub_accuracy;
+SPSS_100_rand = [ones(size(SPSS,1),1) SPSS];
+
+% Get 100 rand meta data
+accuracy_based_analysis_100_rand_meta
+learning_curve_100_rand_meta = learning_curve;
+std_err_curve_100_rand_meta = std_err_curve;
+
+sub_accuracy_100_rand_meta = sub_accuracy;
+SPSS_100_rand_meta = [2*ones(size(SPSS,1),1) SPSS];
+
+% Get 75/25 data
+accuracy_based_analysis_randtrue
+learning_curve_75_25 = learning_curve;
+std_err_curve_75_25 = std_err_curve;
+
+sub_accuracy_75_25 = sub_accuracy;
+SPSS_75_25 = [ones(size(SPSS,1),1) SPSS];
+
+% Get 75/25 meta data
+accuracy_based_analysis_randtrue_meta
+learning_curve_75_25_meta = learning_curve;
+std_err_curve_75_25_meta = std_err_curve;
+
+sub_accuracy_75_25_meta = sub_accuracy;
+SPSS_75_25_meta = [2*ones(size(SPSS,1),1) SPSS];
+
+% Get nc 40 data
+accuracy_based_analysis_nc_40
+learning_curve_40 = learning_curve;
+std_err_curve_40 = std_err_curve;
+
+sub_accuracy_40 = sub_accuracy;
+SPSS_40 = [ones(size(SPSS,1),1) SPSS];
+
+% Get nc 40 meta data
+accuracy_based_analysis_nc_40_meta
+learning_curve_40_meta = learning_curve;
+std_err_curve_40_meta = std_err_curve;
+
+sub_accuracy_40_meta = sub_accuracy;
+SPSS_40_meta = [2*ones(size(SPSS,1),1) SPSS];
+
+
+
+mean_all = mean([learning_curve_100_rand(1:12); learning_curve_75_25(1:12); learning_curve_40(1:12)]);
+resp_err_all = mean([std_err_curve_100_rand(1:12); std_err_curve_75_25(1:12); std_err_curve_40(1:12)]);
+
+%% Across condition figures
+% figure, hold
+% 
+% errorbar(1:12, mean_all(1:12), resp_err_all(1:12), resp_err_all(1:12), '-', 'LineWidth', 2, 'color', [0.0 0.0 0.0])
+% errorbar(1:12, learning_curve_100_rand(25:36), std_err_curve_100_rand(25:36), std_err_curve_100_rand(25:36), '-', 'LineWidth', 2, 'color', [1.0 0.0 0.0])
+% errorbar(1:12, learning_curve_75_25(25:36), std_err_curve_75_25(25:36), std_err_curve_75_25(25:36), '-', 'LineWidth', 2, 'color', [0.0 1.0 0.0])
+% errorbar(1:12, learning_curve_40(25:36), std_err_curve_40(25:36), std_err_curve_40(25:36), '-', 'LineWidth', 2, 'color', [0.0 0.0 1.0])
+% 
+% axis([0 12+1 0.0 1])
+% axis square
+% set(gca,'XTick',1:12, 'fontsize', 10, 'fontweight', 'b')
+% xlabel('Block', 'fontsize', 18, 'fontweight', 'b')
+% ylabel('Proportion Correct', 'fontsize', 18, 'fontweight', 'b')
+% legend({'Mean Acquisition','Exp 1 Reacquisition','Exp 2 Reacquisition','Exp 3 Reacquisition'}, 'fontsize', 16, 'fontweight', 'b')
+
+% figure, hold
+% 
+% errorbar(1:12, mean_all(1:12), resp_err_all(1:12), resp_err_all(1:12), '--', 'LineWidth', 2, 'color', [0.0 0.0 0.0])
+% errorbar(1:12, learning_curve_100_rand(25:36), std_err_curve_100_rand(25:36), std_err_curve_100_rand(25:36), '-', 'LineWidth', 2, 'color', [0.2 0.2 0.2])
+% errorbar(1:12, learning_curve_75_25(25:36), std_err_curve_75_25(25:36), std_err_curve_75_25(25:36), '-', 'LineWidth', 2, 'color', [0.4 0.4 0.4])
+% errorbar(1:12, learning_curve_40(25:36), std_err_curve_40(25:36), std_err_curve_40(25:36), '-', 'LineWidth', 2, 'color', [0.6 0.6 0.6])
+% 
+% axis([0 12+1 0.0 1])
+% axis square
+% set(gca,'XTick',1:12, 'fontsize', 10, 'fontweight', 'b')
+% xlabel('Block', 'fontsize', 18, 'fontweight', 'b')
+% ylabel('Proportion Correct', 'fontsize', 18, 'fontweight', 'b')
+% legend({'Mean Acquisition','Exp 1 Reacquisition','Exp 2 Reacquisition','Exp 3 Reacquisition'}, 'fontsize', 16, 'fontweight', 'b')
+
+%% Across conditions stats
+
+pooled_ac = [sub_accuracy_100_rand(:,1:12); sub_accuracy_75_25(:,1:12); sub_accuracy_40(:,1:12);];
+reac_100_rand = sub_accuracy_100_rand(:,25:36);
+reac_75_25 = sub_accuracy_75_25(:,25:36);
+reac_40 = sub_accuracy_40(:,25:36);
+
+pooled_ac = reshape(pooled_ac, prod(size(pooled_ac)),1);
+reac_100_rand = reshape(reac_100_rand, prod(size(reac_100_rand)),1);
+reac_75_25 = reshape(reac_75_25, prod(size(reac_75_25)),1);
+reac_40 = reshape(reac_40, prod(size(reac_40)),1);
+
+% mean(pooled_ac)
+% mean(reac_100_rand)
+% mean(reac_75_25)
+% mean(reac_40)
+
+% [H,P,CI,STATS] = ttest2(pooled_ac, reac_100_rand)
+% [H,P,CI,STATS] = ttest2(pooled_ac, reac_75_25)
+% [H,P,CI,STATS] = ttest2(pooled_ac, reac_40)
+% 
+% [H,P,CI,STATS] = ttest2(reac_100_rand, reac_75_25)
+% [H,P,CI,STATS] = ttest2(reac_100_rand, reac_40)
+% 
+% [H,P,CI,STATS] = ttest2(reac_75_25, reac_100_rand)
+% [H,P,CI,STATS] = ttest2(reac_75_25, reac_40)
+% 
+% [H,P,CI,STATS] = ttest2(reac_40, reac_100_rand)
+% [H,P,CI,STATS] = ttest2(reac_40, reac_75_25)
+
+
+
+%% Stats 100 Rand
+
+% 100 rand
+ac = sub_accuracy_100_rand(:,1:12);
+ext = sub_accuracy_100_rand(:,13:24);
+reac = sub_accuracy_100_rand(:,25:36);
+
+ext_rand = ext;
+
+diff_ac_ext = ac - ext;
+diff_reac_ext = reac - ext;
+diff_ac_reac = ac - reac;
+
+diff_ac_ext = reshape(diff_ac_ext,numel(diff_ac_ext),1);
+diff_reac_ext = reshape(diff_reac_ext,numel(diff_reac_ext),1);
+diff_ac_reac = reshape(diff_ac_reac,numel(diff_ac_reac),1);
+
+% [H_1,P_1,CI_1,STATS_1] = ttest(diff_ac_ext)
+% [H_2,P_2,CI_2,STATS_2] = ttest(diff_reac_ext)
+% [H_3,P_3,CI_3,STATS_3] = ttest(diff_ac_reac)
+
+% Compute the effect sizes for these statistics 
+% mean(diff_ac_ext) / std(diff_ac_ext)
+% mean(diff_reac_ext) / std(diff_reac_ext)
+% mean(diff_ac_reac) / std(diff_ac_reac)
+
+% Next set of t-tests
+first_ac = sub_accuracy_100_rand(:,1);
+last_ac = sub_accuracy_100_rand(:,12);
+last_ext = sub_accuracy_100_rand(:,24);
+
+diff_ac1_ext12 = first_ac-last_ext;
+diff_ac12_ext12 = last_ac-last_ext;
+
+% [H,P,CI,STATS] = ttest(diff_ac1_ext12)
+% [H,P,CI,STATS] = ttest(diff_ac12_ext12)
+
+ext_test_100_rand = ext(:,end-1:end);
+ext_test_100_rand = reshape(ext_test_100_rand,prod(size(ext_test_100_rand)),1);
+% [H,P,CI,STATS] = ttest(ext_test_75_25, 0.25)
+
+%100_rand Meta
+ac = sub_accuracy_100_rand_meta(:,1:12);
+ext = sub_accuracy_100_rand_meta(:,13:24);
+reac = sub_accuracy_100_rand_meta(:,25:36);
+
+ext_meta = ext;
+
+diff_ac_ext = ac - ext;
+diff_reac_ext = reac - ext;
+diff_ac_reac = ac - reac;
+
+diff_ac_ext = reshape(diff_ac_ext,numel(diff_ac_ext),1);
+diff_reac_ext = reshape(diff_reac_ext,numel(diff_reac_ext),1);
+diff_ac_reac = reshape(diff_ac_reac,numel(diff_ac_reac),1);
+
+% [H_1,P_1,CI_1,STATS_1] = ttest(diff_ac_ext)
+% [H_2,P_2,CI_2,STATS_2] = ttest(diff_reac_ext)
+% [H_3,P_3,CI_3,STATS_3] = ttest(diff_ac_reac)
+
+% % Compute the effect sizes for these statistics 
+% mean(diff_ac_ext) / std(diff_ac_ext)
+% mean(diff_reac_ext) / std(diff_reac_ext)
+% mean(diff_ac_reac) / std(diff_ac_reac)
+
+
+% SHIT - TO DO THESE POOLED ANALYSES I'M GOING TO HAVE TO DIG UP THE 
+% T-TEST CODE FOR DIFFERENT SAMPLE SIZES
+% % % Pool acquisition and extinction phase data together and repeat tests
+% % pooled_ac = [sub_accuracy_100_rand(:,1:12); sub_accuracy_100_rand_meta(:,1:12);];
+% % pooled_ext = [sub_accuracy_100_rand(:,13:24); sub_accuracy_100_rand_meta(:,13:24);];
+% % reac_100_rand = sub_accuracy_100_rand(:,25:36);
+% % reac_100_rand_meta = sub_accuracy_100_rand_meta(:,25:36);
+% % 
+% % diff_ac_ext = pooled_ac - pooled_ext;
+% % diff_reac_100_rand_ext = reac_100_rand - ext;
+% % diff_reac_100_rand_meta_ext = reac_100_rand_meta - ext;
+% % diff_ac_reac_100_rand = ac - reac_100_rand;
+% % diff_ac_reac_100_rand_meta = ac - reac_100_rand_meta;
+% % 
+% % diff_ac_ext = reshape(diff_ac_ext,numel(diff_ac_ext),1);
+% % diff_reac_100_rand_ext = reshape(diff_reac_100_rand_ext,numel(diff_reac_100_rand_ext),1);
+% % diff_reac_100_rand_meta_ext = reshape(diff_reac_100_rand_meta_ext,numel(diff_reac_100_rand_meta_ext),1);
+% % diff_ac_reac_100_rand = reshape(diff_ac_reac_100_rand,numel(diff_ac_reac_100_rand),1);
+% % diff_ac_reac_100_rand_meta = reshape(diff_ac_reac_100_rand_meta,numel(diff_ac_reac_100_rand_meta),1);
+% % 
+% % [H_1,P_1,CI_1,STATS_1] = ttest(diff_ac_ext)
+% % [H_2,P_2,CI_2,STATS_2] = ttest(diff_reac_100_rand_ext)
+% % [H_3,P_3,CI_3,STATS_3] = ttest(diff_reac_100_rand_meta_ext)
+% % [H_1,P_1,CI_1,STATS_1] = ttest(diff_ac_reac_100_rand)
+% % [H_2,P_2,CI_2,STATS_2] = ttest(diff_ac_reac_100_rand_meta)
+
+% test first 5 blocks of acquisition and reacquisition for 100_rand
+ac = sub_accuracy_100_rand(:,1:5);
+reac = sub_accuracy_100_rand(:,25:29);
+
+diff_ac_reac = ac - reac;
+
+diff_ac_reac = reshape(diff_ac_reac,numel(diff_ac_reac),1);
+
+% [H_3,P_3,CI_3,STATS_3] = ttest(diff_ac_reac)
+
+% test the remaining blocks of acquisition and reacquisition for 100_rand
+ac = sub_accuracy_100_rand(:,6:12);
+reac = sub_accuracy_100_rand(:,30:36);
+
+diff_ac_reac = ac - reac;
+
+diff_ac_reac = reshape(diff_ac_reac,numel(diff_ac_reac),1);
+
+% [H_3,P_3,CI_3,STATS_3] = ttest(diff_ac_reac)
+
+
+% Tests to examine extinciton
+first_ac = sub_accuracy_100_rand(:,1);
+last_ac = sub_accuracy_100_rand(:,12);
+last_ext = sub_accuracy_100_rand(:,24);
+
+diff_ac1_ext12 = first_ac-last_ext;
+diff_ac12_ext12 = last_ac-last_ext;
+
+% [H,P,CI,STATS] = ttest(diff_ac1_ext12)
+% [H,P,CI,STATS] = ttest(diff_ac12_ext12)
+
+% % Compute effect sizes for these tests
+% mean(diff_ac1_ext12) / std(diff_ac1_ext12)
+
+
+first_ac = sub_accuracy_100_rand_meta(:,1);
+last_ac = sub_accuracy_100_rand_meta(:,12);
+last_ext = sub_accuracy_100_rand_meta(:,24);
+
+diff_ac1_ext12 = first_ac-last_ext;
+diff_ac12_ext12 = last_ac-last_ext;
+
+% [H,P,CI,STATS] = ttest(diff_ac1_ext12)
+% [H,P,CI,STATS] = ttest(diff_ac12_ext12)
+
+% % Compute effect sizes for these tests
+% mean(diff_ac1_ext12) / std(diff_ac1_ext12)
+
+ext_test_100_rand = ext_rand(:,end-1:end);
+ext_test_100_rand = reshape(ext_test_100_rand,prod(size(ext_test_100_rand)),1);
+
+ext_test_100_rand_meta = ext_meta(:,end-1:end);
+ext_test_100_rand_meta = reshape(ext_test_100_rand_meta,prod(size(ext_test_100_rand_meta)),1);
+
+% [H,P,CI,STATS] = ttest(ext_test_100_rand, 0.25)
+% [H,P,CI,STATS] = ttest(ext_test_100_rand_meta, 0.25)
+% 
+%  [H,P,CI,STATS] = ttest([ext_test_100_rand; ext_test_100_rand_meta], 0.25)
+
+% % Compute effect sizes for these tests
+% (mean(ext_test_100_rand) - 0.25) / std(ext_test_100_rand)
+% (mean(ext_test_100_rand_meta) - 0.25) / std(ext_test_100_rand_meta)
+% (mean([ext_test_100_rand; ext_test_100_rand_meta]) - 0.25) / std([ext_test_100_rand; ext_test_100_rand_meta])
+
+%% Stats 75-25
+
+% 75-25
+ac = sub_accuracy_75_25(:,1:12);
+ext = sub_accuracy_75_25(:,13:24);
+reac = sub_accuracy_75_25(:,25:36);
+
+ext_75_25 = ext;
+
+diff_ac_ext = ac - ext;
+diff_reac_ext = reac - ext;
+diff_ac_reac = ac - reac;
+
+diff_ac_ext = reshape(diff_ac_ext,numel(diff_ac_ext),1);
+diff_reac_ext = reshape(diff_reac_ext,numel(diff_reac_ext),1);
+diff_ac_reac = reshape(diff_ac_reac,numel(diff_ac_reac),1);
+
+% [H_1,P_1,CI_1,STATS_1] = ttest(diff_ac_ext)
+% [H_2,P_2,CI_2,STATS_2] = ttest(diff_reac_ext)
+% [H_3,P_3,CI_3,STATS_3] = ttest(diff_ac_reac)
+
+% % Compute the effect sizes for these statistics 
+% mean(diff_ac_ext) / std(diff_ac_ext)
+% mean(diff_reac_ext) / std(diff_reac_ext)
+% mean(diff_ac_reac) / std(diff_ac_reac)
+
+% Next set of t-tests
+first_ac = sub_accuracy_75_25(:,1);
+last_ac = sub_accuracy_75_25(:,12);
+last_ext = sub_accuracy_75_25(:,24);
+
+diff_ac1_ext12 = first_ac-last_ext;
+diff_ac12_ext12 = last_ac-last_ext;
+
+% [H,P,CI,STATS] = ttest(diff_ac1_ext12)
+% [H,P,CI,STATS] = ttest(diff_ac12_ext12)
+
+% % Compute effect sizes for these tests
+% mean(diff_ac1_ext12) / std(diff_ac1_ext12)
+
+ext_test_75_25 = ext_75_25(:,end-1:end);
+ext_test_75_25 = reshape(ext_test_75_25,prod(size(ext_test_75_25)),1);
+% [H,P,CI,STATS] = ttest(ext_test_75_25, 0.25)
+
+%75-25 Meta
+ac = sub_accuracy_75_25_meta(:,1:12);
+ext = sub_accuracy_75_25_meta(:,13:24);
+reac = sub_accuracy_75_25_meta(:,25:36);
+
+ext_meta = ext;
+
+diff_ac_ext = ac - ext;
+diff_reac_ext = reac - ext;
+diff_ac_reac = ac - reac;
+
+diff_ac_ext = reshape(diff_ac_ext,numel(diff_ac_ext),1);
+diff_reac_ext = reshape(diff_reac_ext,numel(diff_reac_ext),1);
+diff_ac_reac = reshape(diff_ac_reac,numel(diff_ac_reac),1);
+
+% [H_1,P_1,CI_1,STATS_1] = ttest(diff_ac_ext)
+% [H_2,P_2,CI_2,STATS_2] = ttest(diff_reac_ext)
+% [H_3,P_3,CI_3,STATS_3] = ttest(diff_ac_reac)
+
+% Compute the effect sizes for these statistics 
+% mean(diff_ac_ext) / std(diff_ac_ext)
+% mean(diff_reac_ext) / std(diff_reac_ext)
+% mean(diff_ac_reac) / std(diff_ac_reac)
+
+first_ac = sub_accuracy_75_25_meta(:,1);
+last_ac = sub_accuracy_75_25_meta(:,12);
+last_ext = sub_accuracy_75_25_meta(:,24);
+
+diff_ac1_ext12 = first_ac-last_ext;
+diff_ac12_ext12 = last_ac-last_ext;
+
+% [H,P,CI,STATS] = ttest(diff_ac1_ext12)
+% [H,P,CI,STATS] = ttest(diff_ac12_ext12)
+
+% % Compute effect sizes for these tests
+% mean(diff_ac1_ext12) / std(diff_ac1_ext12)
+
+ext_test_75_25_meta = ext_meta(:,end-1:end);
+ext_test_75_25_meta = reshape(ext_test_75_25_meta,prod(size(ext_test_75_25_meta)),1);
+
+% [H,P,CI,STATS] = ttest(ext_test_75_25, 0.25)
+% [H,P,CI,STATS] = ttest(ext_test_75_25_meta, 0.25)
+% 
+%  [H,P,CI,STATS] = ttest([ext_test_75_25; ext_test_75_25_meta], 0.25)
+
+% % Compute effect sizes for these tests
+(mean(ext_test_100_rand) - 0.25) / std(ext_test_100_rand)
+(mean(ext_test_100_rand_meta) - 0.25) / std(ext_test_75_meta)
+(mean([ext_test_100_rand; ext_test_100_rand_meta]) - 0.25) / std([ext_test_100_rand; ext_test_100_rand_meta])
+
+%%%%%%%%%%%%%%%
+
+%% Stats NC-40
+
+% NC-40
+ac = sub_accuracy_40(:,1:12);
+ext = sub_accuracy_40(:,13:24);
+reac = sub_accuracy_40(:,25:36);
+
+diff_ac_ext = ac - ext;
+diff_reac_ext = reac - ext;
+diff_ac_reac = ac - reac;
+
+diff_ac_ext = reshape(diff_ac_ext,numel(diff_ac_ext),1);
+diff_reac_ext = reshape(diff_reac_ext,numel(diff_reac_ext),1);
+diff_ac_reac = reshape(diff_ac_reac,numel(diff_ac_reac),1);
+
+% [H_1,P_1,CI_1,STATS_1] = ttest(diff_ac_ext)
+% [H_2,P_2,CI_2,STATS_2] = ttest(diff_reac_ext)
+% [H_3,P_3,CI_3,STATS_3] = ttest(diff_ac_reac)
+
+% Compute the effect sizes for these statistics 
+% mean(diff_ac_ext) / std(diff_ac_ext)
+% mean(diff_reac_ext) / std(diff_reac_ext)
+% mean(diff_ac_reac) / std(diff_ac_reac)
+
+% Next set of t-tests
+first_ac = sub_accuracy_40(:,1);
+last_ac = sub_accuracy_40(:,12);
+last_ext = sub_accuracy_40(:,24);
+
+diff_ac1_ext12 = first_ac-last_ext;
+diff_ac12_ext12 = last_ac-last_ext;
+
+diff_ac1_ext12_nc = diff_ac1_ext12;
+
+% [H,P,CI,STATS] = ttest(diff_ac1_ext12)
+% [H,P,CI,STATS] = ttest(diff_ac12_ext12)
+
+ext_test_40 = ext(:,end-1:end);
+ext_test_40 = reshape(ext_test_40,prod(size(ext_test_40)),1);
+% [H,P,CI,STATS] = ttest(ext_test_75_25, 0.25)
+
+% NC-40 Meta
+ac = sub_accuracy_40_meta(:,1:12);
+ext = sub_accuracy_40_meta(:,13:24);
+reac = sub_accuracy_40_meta(:,25:36);
+
+diff_ac_ext = ac - ext;
+diff_reac_ext = reac - ext;
+diff_ac_reac = ac - reac;
+
+diff_ac_ext = reshape(diff_ac_ext,numel(diff_ac_ext),1);
+diff_reac_ext = reshape(diff_reac_ext,numel(diff_reac_ext),1);
+diff_ac_reac = reshape(diff_ac_reac,numel(diff_ac_reac),1);
+
+% [H_1,P_1,CI_1,STATS_1] = ttest(diff_ac_ext)
+% [H_2,P_2,CI_2,STATS_2] = ttest(diff_reac_ext)
+% [H_3,P_3,CI_3,STATS_3] = ttest(diff_ac_reac)
+
+% Compute the effect sizes for these statistics 
+% mean(diff_ac_ext) / std(diff_ac_ext)
+% mean(diff_reac_ext) / std(diff_reac_ext)
+% mean(diff_ac_reac) / std(diff_ac_reac)
+
+% Next set of t-tests
+first_ac = sub_accuracy_40(:,1);
+last_ac = sub_accuracy_40(:,12);
+last_ext = sub_accuracy_40(:,24);
+
+diff_ac1_ext12 = first_ac-last_ext;
+diff_ac12_ext12 = last_ac-last_ext;
+
+diff_ac1_ext12_nc_meta = diff_ac1_ext12;
+
+% [H,P,CI,STATS] = ttest(diff_ac1_ext12)
+% [H,P,CI,STATS] = ttest(diff_ac12_ext12)
+
+first_ac = sub_accuracy_40_meta(:,1);
+last_ac = sub_accuracy_40_meta(:,12);
+last_ext = sub_accuracy_40_meta(:,24);
+
+diff_ac1_ext12 = first_ac-last_ext;
+diff_ac12_ext12 = last_ac-last_ext;
+
+diff_ac1_ext12_nc_meta = diff_ac1_ext12;
+
+% [H,P,CI,STATS] = ttest(diff_ac1_ext12)
+% [H,P,CI,STATS] = ttest(diff_ac12_ext12)
+
+% [H,P,CI,STATS] = ttest([diff_ac1_ext12_nc; diff_ac1_ext12_nc_meta])
+
+% pool acquisition and extinction and compare ac1 to ext12
+first_ac = [sub_accuracy_40(:,1); sub_accuracy_40_meta(:,1)];
+last_ext = [sub_accuracy_40(:,24); sub_accuracy_40_meta(:,24)];
+diff_ac1_ext12 = first_ac-last_ext;
+
+% [H,P,CI,STATS] = ttest(diff_ac1_ext12)
+
+ext_test_40_meta = ext(:,end-1:end);
+ext_test_40_meta = reshape(ext_test_40_meta,prod(size(ext_test_40_meta)),1);
+% [H,P,CI,STATS] = ttest(ext_test_40_meta, 0.25)
+
+%  [H,P,CI,STATS] = ttest([ext_test_40; ext_test_40_meta], 0.25)
+
+%% Figures
+
+if figures
+    
+    if ~color
+        
+        % Generate overlay figure for all conditions
+        mean_acquisition = mean([learning_curve_100_rand; learning_curve_75_25; learning_curve_40]);
+        mean_acquisition_stderr = mean([std_err_curve_100_rand; std_err_curve_75_25; std_err_curve_40]); % Think about this and make sure it makes sense
+        
+%         figure, hold
+%         
+%         errorbar(1:12, mean_acquisition(1:12), mean_acquisition_stderr(1:12), mean_acquisition_stderr(1:12), '-k', 'LineWidth', 3)
+%         
+%         errorbar(1:12, learning_curve_100_rand_meta(25:36), std_err_curve_100_rand_meta(25:36), std_err_curve_100_rand_meta(25:36), '--b', 'LineWidth', 2)
+%         
+%         errorbar(1:12, learning_curve_75_25(25:36), std_err_curve_75_25(25:36), std_err_curve_75_25(25:36), '-g', 'LineWidth', 2)
+%         errorbar(1:12, learning_curve_75_25_meta(25:36), std_err_curve_75_25_meta(25:36), std_err_curve_75_25_meta(25:36), '--g', 'LineWidth', 2)
+%         
+%         errorbar(1:12, learning_curve_40(25:36), std_err_curve_40(25:36), std_err_curve_40(25:36), '-r', 'LineWidth', 2)
+%         errorbar(1:12, learning_curve_40_meta(25:36), std_err_curve_40_meta(25:36), std_err_curve_40_meta(25:36), '--r', 'LineWidth', 2)
+%         axis([0 12+1 0.0 1])
+%         axis square
+%         set(gca,'XTick',1:12, 'fontsize', 10, 'fontweight', 'b')
+%         xlabel('Block', 'fontsize', 18, 'fontweight', 'b')
+%         ylabel('Proportion Correct', 'fontsize', 18, 'fontweight', 'b')
+
+        figure, hold
+        plot(1:12, mean_acquisition(1:12), '-k', 'LineWidth', 3)
+        
+        plot(1:12, learning_curve_100_rand(25:36), '-b', 'LineWidth', 2)
+        plot(1:12, learning_curve_100_rand_meta(25:36), '--b', 'LineWidth', 2)
+        
+        plot(1:12, learning_curve_75_25(25:36), '-g', 'LineWidth', 2)
+        plot(1:12, learning_curve_75_25_meta(25:36), '--g', 'LineWidth', 2)
+        
+        plot(1:12, learning_curve_40(25:36), '-r', 'LineWidth', 2)
+        plot(1:12, learning_curve_40_meta(25:36), '--r', 'LineWidth', 2)
+        axis([0 12+1 0.0 1])
+        axis square
+        set(gca,'XTick',1:12, 'fontsize', 10, 'fontweight', 'b')
+        xlabel('Block', 'fontsize', 18, 'fontweight', 'b')
+        ylabel('Proportion Correct', 'fontsize', 18, 'fontweight', 'b')
+        
+        % 100 rand
+        figure, hold
+        errorbar(1:36, learning_curve_100_rand(1:36), std_err_curve_100_rand(1:36), std_err_curve_100_rand(1:36), '-', 'LineWidth', 2, 'color', [0.0 0.0 0.0])
+        errorbar(1:36, learning_curve_100_rand_meta(1:36), std_err_curve_100_rand_meta(1:36), std_err_curve_100_rand_meta(1:36), '--', 'LineWidth', 2, 'color', [0.0 0.0 0.0])
+        axis([0 36+1 0.0 1])
+        axis square
+        set(gca,'XTick',2:2:36, 'fontsize', 10, 'fontweight', 'b')
+        xlabel('Block', 'fontsize', 18, 'fontweight', 'b')
+        ylabel('Proportion Correct', 'fontsize', 18, 'fontweight', 'b')
+
+        % 100 rand - Overlay
+        figure, hold
+        errorbar(1:12, learning_curve_100_rand(1:12), std_err_curve_100_rand(1:12), std_err_curve_100_rand(1:12), '-', 'LineWidth', 2, 'color', [0.0 0.0 0.0])
+        errorbar(1:12, learning_curve_100_rand(13:24), std_err_curve_100_rand(13:24), std_err_curve_100_rand(13:24), '-', 'LineWidth', 2, 'color', [0.5 0.5 0.5])
+        errorbar(1:12, learning_curve_100_rand(25:36), std_err_curve_100_rand(25:36), std_err_curve_100_rand(25:36), '--', 'LineWidth', 2, 'color', [0.0 0.0 0.0])
+        axis([0 12+1 0.0 1])
+        axis square
+        set(gca,'XTick',1:12, 'fontsize', 10, 'fontweight', 'b')
+        xlabel('Block', 'fontsize', 18, 'fontweight', 'b')
+        ylabel('Proportion Correct', 'fontsize', 18, 'fontweight', 'b')
+        
+        % 100 rand meta - Overlay
+        figure, hold
+        errorbar(1:12, learning_curve_100_rand_meta(1:12), std_err_curve_100_rand_meta(1:12), std_err_curve_100_rand_meta(1:12), '-', 'LineWidth', 2, 'color', [0.0 0.0 0.0])
+        errorbar(1:12, learning_curve_100_rand_meta(13:24), std_err_curve_100_rand_meta(13:24), std_err_curve_100_rand_meta(13:24), '-', 'LineWidth', 2, 'color', [0.5 0.5 0.5])
+        errorbar(1:12, learning_curve_100_rand_meta(25:36), std_err_curve_100_rand_meta(25:36), std_err_curve_100_rand_meta(25:36), '--', 'LineWidth', 2, 'color', [0.0 0.0 0.0])
+        axis([0 12+1 0.0 1])
+        axis square
+        set(gca,'XTick',1:12, 'fontsize', 10, 'fontweight', 'b')
+        xlabel('Block', 'fontsize', 18, 'fontweight', 'b')
+        ylabel('Proportion Correct', 'fontsize', 18, 'fontweight', 'b')
+
+        % 75-25
+        figure, hold
+        errorbar(1:36, learning_curve_75_25(1:36), std_err_curve_75_25(1:36), std_err_curve_75_25(1:36), '-', 'LineWidth', 2, 'color', [0.0 0.0 0.0])
+        errorbar(1:36, learning_curve_75_25_meta(1:36), std_err_curve_75_25_meta(1:36), std_err_curve_75_25_meta(1:36), '--', 'LineWidth', 2, 'color', [0.0 0.0 0.0])
+        axis([0 36+1 0.0 1])
+        axis square
+        set(gca,'XTick',2:2:36, 'fontsize', 10, 'fontweight', 'b')
+        xlabel('Block', 'fontsize', 18, 'fontweight', 'b')
+        ylabel('Proportion Correct', 'fontsize', 18, 'fontweight', 'b')
+
+        % 75-25 rand - Overlay
+        figure, hold
+        errorbar(1:12, learning_curve_75_25(1:12), std_err_curve_75_25(1:12), std_err_curve_75_25(1:12), '-', 'LineWidth', 2, 'color', [0.0 0.0 0.0])
+        errorbar(1:12, learning_curve_75_25(13:24), std_err_curve_75_25(13:24), std_err_curve_75_25(13:24), '-', 'LineWidth', 2, 'color', [0.5 0.5 0.5])
+        errorbar(1:12, learning_curve_75_25(25:36), std_err_curve_75_25(25:36), std_err_curve_75_25(25:36), '--', 'LineWidth', 2, 'color', [0.0 0.0 0.0])
+        axis([0 12+1 0.0 1])
+        axis square
+        set(gca,'XTick',1:12, 'fontsize', 10, 'fontweight', 'b')
+        xlabel('Block', 'fontsize', 18, 'fontweight', 'b')
+        ylabel('Proportion Correct', 'fontsize', 18, 'fontweight', 'b')
+        
+        % 75-25 rand meta - Overlay
+        figure, hold
+        errorbar(1:12, learning_curve_75_25_meta(1:12), std_err_curve_75_25_meta(1:12), std_err_curve_75_25_meta(1:12), '-', 'LineWidth', 2, 'color', [0.0 0.0 0.0])
+        errorbar(1:12, learning_curve_75_25_meta(13:24), std_err_curve_75_25_meta(13:24), std_err_curve_75_25_meta(13:24), '-', 'LineWidth', 2, 'color', [0.5 0.5 0.5])
+        errorbar(1:12, learning_curve_75_25_meta(25:36), std_err_curve_75_25_meta(25:36), std_err_curve_75_25_meta(25:36), '--', 'LineWidth', 2, 'color', [0.0 0.0 0.0])
+        axis([0 12+1 0.0 1])
+        axis square
+        set(gca,'XTick',1:12, 'fontsize', 10, 'fontweight', 'b')
+        xlabel('Block', 'fontsize', 18, 'fontweight', 'b')
+        ylabel('Proportion Correct', 'fontsize', 18, 'fontweight', 'b')
+        
+        % nc 40
+        figure, hold
+        errorbar(1:36, learning_curve_40(1:36), std_err_curve_40(1:36), std_err_curve_40(1:36), '-', 'LineWidth', 2, 'color', [0.0 0.0 0.0])
+        errorbar(1:36, learning_curve_40_meta(1:36), std_err_curve_40_meta(1:36), std_err_curve_40_meta(1:36), '--', 'LineWidth', 2, 'color', [0.0 0.0 0.0])
+        axis([0 36+1 0.0 1])
+        axis square
+        set(gca,'XTick',2:2:36, 'fontsize', 10, 'fontweight', 'b')
+        xlabel('Block', 'fontsize', 18, 'fontweight', 'b')
+        ylabel('Proportion Correct', 'fontsize', 18, 'fontweight', 'b')
+
+        % nc 40 - overlay
+        figure, hold
+        errorbar(1:12, learning_curve_40(1:12), std_err_curve_40(1:12), std_err_curve_40(1:12), '-', 'LineWidth', 2, 'color', [0.0 0.0 0.0])
+        errorbar(1:12, learning_curve_40(13:24), std_err_curve_40(13:24), std_err_curve_40(13:24), '-', 'LineWidth', 2, 'color', [0.5 0.5 0.5])
+        errorbar(1:12, learning_curve_40(25:36), std_err_curve_40(25:36), std_err_curve_40(25:36), '--', 'LineWidth', 2, 'color', [0.0 0.0 0.0])
+        axis([0 12+1 0.0 1])
+        axis square
+        set(gca,'XTick',1:12, 'fontsize', 10, 'fontweight', 'b')
+        xlabel('Block', 'fontsize', 18, 'fontweight', 'b')
+        ylabel('Proportion Correct', 'fontsize', 18, 'fontweight', 'b')
+        
+        % nc 40 meta - Overlay
+        figure, hold
+        errorbar(1:12, learning_curve_40_meta(1:12), std_err_curve_40_meta(1:12), std_err_curve_40_meta(1:12), '-', 'LineWidth', 2, 'color', [0.0 0.0 0.0])
+        errorbar(1:12, learning_curve_40_meta(13:24), std_err_curve_40_meta(13:24), std_err_curve_40_meta(13:24), '-', 'LineWidth', 2, 'color', [0.5 0.5 0.5])
+        errorbar(1:12, learning_curve_40_meta(25:36), std_err_curve_40_meta(25:36), std_err_curve_40_meta(25:36), '--', 'LineWidth', 2, 'color', [0.0 0.0 0.0])
+        axis([0 12+1 0.0 1])
+        axis square
+        set(gca,'XTick',1:12, 'fontsize', 10, 'fontweight', 'b')
+        xlabel('Block', 'fontsize', 18, 'fontweight', 'b')
+        ylabel('Proportion Correct', 'fontsize', 18, 'fontweight', 'b')
+        
+    else % Use Color
+        
+        % 100 rand
+        figure, hold
+        errorbar(1:36, learning_curve_100_rand(1:36), std_err_curve_100_rand(1:36), std_err_curve_100_rand(1:36), '-', 'LineWidth', 2, 'color', [0.0 0.0 1.0])
+        errorbar(1:36, learning_curve_100_rand_meta(1:36), std_err_curve_100_rand_meta(1:36), std_err_curve_100_rand_meta(1:36), '-', 'LineWidth', 2, 'color', [0.0 1.0 0.0])
+        axis([0 36+1 0.0 1])
+        axis square
+        set(gca,'XTick',2:2:36, 'fontsize', 10, 'fontweight', 'b')
+        xlabel('Block', 'fontsize', 18, 'fontweight', 'b')
+        ylabel('Proportion Correct', 'fontsize', 18, 'fontweight', 'b')
+
+        % 100 rand - Overlay
+        figure, hold
+        errorbar(1:12, learning_curve_100_rand(1:12), std_err_curve_100_rand(1:12), std_err_curve_100_rand(1:12), '-b', 'LineWidth', 2)
+        errorbar(1:12, learning_curve_100_rand(13:24), std_err_curve_100_rand(13:24), std_err_curve_100_rand(13:24), '-r', 'LineWidth', 2)
+        errorbar(1:12, learning_curve_100_rand(25:36), std_err_curve_100_rand(25:36), std_err_curve_100_rand(25:36), '-g', 'LineWidth', 2)
+        axis([0 12+1 0.0 1])
+        axis square
+        set(gca,'XTick',1:12, 'fontsize', 10, 'fontweight', 'b')
+        xlabel('Block', 'fontsize', 18, 'fontweight', 'b')
+        ylabel('Proportion Correct', 'fontsize', 18, 'fontweight', 'b')
+        
+        % 100 rand meta - Overlay
+        figure, hold
+        errorbar(1:12, learning_curve_100_rand_meta(1:12), std_err_curve_100_rand_meta(1:12), std_err_curve_100_rand_meta(1:12), '-b', 'LineWidth', 2)
+        errorbar(1:12, learning_curve_100_rand_meta(13:24), std_err_curve_100_rand_meta(13:24), std_err_curve_100_rand_meta(13:24), '-r', 'LineWidth', 2)
+        errorbar(1:12, learning_curve_100_rand_meta(25:36), std_err_curve_100_rand_meta(25:36), std_err_curve_100_rand_meta(25:36), '-g', 'LineWidth', 2)
+        axis([0 12+1 0.0 1])
+        axis square
+        set(gca,'XTick',1:12, 'fontsize', 10, 'fontweight', 'b')
+        xlabel('Block', 'fontsize', 18, 'fontweight', 'b')
+        ylabel('Proportion Correct', 'fontsize', 18, 'fontweight', 'b')
+
+        % 75-25
+        figure, hold
+        errorbar(1:36, learning_curve_75_25(1:36), std_err_curve_75_25(1:36), std_err_curve_75_25(1:36), '-', 'LineWidth', 2, 'color', [0.0 0.0 1.0])
+        errorbar(1:36, learning_curve_75_25_meta(1:36), std_err_curve_75_25_meta(1:36), std_err_curve_75_25_meta(1:36), '-', 'LineWidth', 2, 'color', [0.0 1.0 0.0])
+        axis([0 36+1 0.0 1])
+        axis square
+        set(gca,'XTick',2:2:36, 'fontsize', 10, 'fontweight', 'b')
+        xlabel('Block', 'fontsize', 18, 'fontweight', 'b')
+        ylabel('Proportion Correct', 'fontsize', 18, 'fontweight', 'b')
+
+        % 75-25 rand - Overlay
+        figure, hold
+        errorbar(1:12, learning_curve_75_25(1:12), std_err_curve_75_25(1:12), std_err_curve_75_25(1:12), '-b', 'LineWidth', 2)
+        errorbar(1:12, learning_curve_75_25(13:24), std_err_curve_75_25(13:24), std_err_curve_75_25(13:24), '-r', 'LineWidth', 2)
+        errorbar(1:12, learning_curve_75_25(25:36), std_err_curve_75_25(25:36), std_err_curve_75_25(25:36), '-g', 'LineWidth', 2)
+        axis([0 12+1 0.0 1])
+        axis square
+        set(gca,'XTick',1:12, 'fontsize', 10, 'fontweight', 'b')
+        xlabel('Block', 'fontsize', 18, 'fontweight', 'b')
+        ylabel('Proportion Correct', 'fontsize', 18, 'fontweight', 'b')
+        
+        % 75-25 rand meta - Overlay
+        figure, hold
+        errorbar(1:12, learning_curve_75_25_meta(1:12), std_err_curve_75_25_meta(1:12), std_err_curve_75_25_meta(1:12), '-b', 'LineWidth', 2)
+        errorbar(1:12, learning_curve_75_25_meta(13:24), std_err_curve_75_25_meta(13:24), std_err_curve_75_25_meta(13:24), '-r', 'LineWidth', 2)
+        errorbar(1:12, learning_curve_75_25_meta(25:36), std_err_curve_75_25_meta(25:36), std_err_curve_75_25_meta(25:36), '-g', 'LineWidth', 2)
+        axis([0 12+1 0.0 1])
+        axis square
+        set(gca,'XTick',1:12, 'fontsize', 10, 'fontweight', 'b')
+        xlabel('Block', 'fontsize', 18, 'fontweight', 'b')
+        ylabel('Proportion Correct', 'fontsize', 18, 'fontweight', 'b')
+        
+        % nc 40
+        figure, hold
+        errorbar(1:36, learning_curve_40(1:36), std_err_curve_40(1:36), std_err_curve_40(1:36), '-', 'LineWidth', 2, 'color', [0.0 0.0 1.0])
+        errorbar(1:36, learning_curve_40_meta(1:36), std_err_curve_40_meta(1:36), std_err_curve_40_meta(1:36), '-', 'LineWidth', 2, 'color', [0.0 1.0 0.0])
+        axis([0 36+1 0.0 1])
+        axis square
+        set(gca,'XTick',2:2:36, 'fontsize', 10, 'fontweight', 'b')
+        xlabel('Block', 'fontsize', 18, 'fontweight', 'b')
+        ylabel('Proportion Correct', 'fontsize', 18, 'fontweight', 'b')
+
+        % nc 40 - Overlay
+        figure, hold
+        errorbar(1:12, learning_curve_40(1:12), std_err_curve_40(1:12), std_err_curve_40(1:12), '-b', 'LineWidth', 2)
+        errorbar(1:12, learning_curve_40(13:24), std_err_curve_40(13:24), std_err_curve_40(13:24), '-r', 'LineWidth', 2)
+        errorbar(1:12, learning_curve_40(25:36), std_err_curve_40(25:36), std_err_curve_40(25:36), '-g', 'LineWidth', 2)
+        axis([0 12+1 0.0 1])
+        axis square
+        set(gca,'XTick',1:12, 'fontsize', 10, 'fontweight', 'b')
+        xlabel('Block', 'fontsize', 18, 'fontweight', 'b')
+        ylabel('Proportion Correct', 'fontsize', 18, 'fontweight', 'b')
+        
+        % nc 40 meta - Overlay
+        figure, hold
+        errorbar(1:12, learning_curve_40_meta(1:12), std_err_curve_40_meta(1:12), std_err_curve_40_meta(1:12), '-b', 'LineWidth', 2)
+        errorbar(1:12, learning_curve_40_meta(13:24), std_err_curve_40_meta(13:24), std_err_curve_40_meta(13:24), '-r', 'LineWidth', 2)
+        errorbar(1:12, learning_curve_40_meta(25:36), std_err_curve_40_meta(25:36), std_err_curve_40_meta(25:36), '-g', 'LineWidth', 2)
+        axis([0 12+1 0.0 1])
+        axis square
+        set(gca,'XTick',1:12, 'fontsize', 10, 'fontweight', 'b')
+        xlabel('Block', 'fontsize', 18, 'fontweight', 'b')
+        ylabel('Proportion Correct', 'fontsize', 18, 'fontweight', 'b')
+
+    end
+
+end
